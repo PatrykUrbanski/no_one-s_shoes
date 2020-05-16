@@ -1,0 +1,23 @@
+.banner{
+  &__Bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -483px;
+    width: 1368px;
+    height: 963px;
+  }
+  &__content {
+    position: relative;
+    &__mainBox {
+     position: absolute;
+      right: 0;
+      top: 50%;
+      .title {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+

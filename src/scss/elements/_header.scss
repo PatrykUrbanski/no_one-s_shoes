@@ -1,0 +1,24 @@
+.header {
+  &__content {
+    &__login {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 46px;
+      margin-bottom: 26px;
+      a {
+        text-decoration: none;
+        margin-left: 20px;
+        color: $secondBg;
+      }
+    }
+    &__nav {
+      display: flex;
+      justify-content: flex-end;
+      a {
+        text-decoration: none;
+        margin-left: 55px;
+        color: $mainText;
+      }
+    }
+  }
+}
