@@ -1,6 +1,3 @@
-# no_one-s_shoes
+#No One's Shoes
 
-##No one's shoes
-
-Project of website connecting people who want to give their used clothes to trusted institutions.
-
+### Project of website helping people who want to give their used clothed to trusted institutions.
