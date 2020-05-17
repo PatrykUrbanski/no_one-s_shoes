@@ -2,6 +2,7 @@
   background-color: #EFCB61;
   width: 100%;
   height: 384px;
+  position: relative;
   &__Bg {
     height: 100%;
     width: 100%;
@@ -12,5 +13,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    &__box {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      .number {
+        font-size: 90px;
+        margin-bottom: 10px;
+      }
+      .subtitle {
+        text-transform: uppercase;
+        font-size: 18px;
+        margin-bottom: 28px;
+      }
+      .text {
+        font-size: 16px;
+      }
+    }
   }
 }
