@@ -5,7 +5,7 @@ export const Banner = () => {
 
     return (
         <>
-            <banner className={"banner"}>
+            <section className={"banner"}>
                 <img className={"banner__Bg"} alt="bannerBg" src="../../assets/Home-Hero-Image.jpg"/>
                 <div className={"banner__content container"}>
                     <div className={"banner__content__mainBox"}>
@@ -14,13 +14,13 @@ export const Banner = () => {
                             <span>Give your old clothes those in need.</span>
                             <img src="../../assets/Decoration.svg"/>
                         </h1>
-                        <div>
-                            <a>Give!</a>
-                            <a>Arrange pickup</a>
+                        <div className={"buttons"}>
+                            <a className={"buttons__elem"}>Give!</a>
+                            <a className={"buttons__elem"}>Arrange pickup</a>
                         </div>
                     </div>
                 </div>
-            </banner>
+            </section>
         </>
     )
 };

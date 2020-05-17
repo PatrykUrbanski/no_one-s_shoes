@@ -46,6 +46,9 @@ module.exports = {
                         }
                     },
                     {
+                        loader: "resolve-url-loader"
+                    },
+                    {
                         loader: 'postcss-loader',
                         options: {
                             plugins: () => [autoprefixer()],
@@ -60,8 +63,8 @@ module.exports = {
                 loader: "file-loader",
                 options: {
                     name: "[name].[ext]",
-                    publicPath: `./src/images/`,
-                    outputPath: `./src/images/`
+                    publicPath: `./src/assets/`,
+                    outputPath: `./src/assets/`
                 }
             },
         ]

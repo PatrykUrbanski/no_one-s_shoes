@@ -67,5 +67,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "resolve-url-loader": "^3.1.1"
+  }
 }
