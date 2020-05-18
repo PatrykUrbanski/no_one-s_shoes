@@ -9,20 +9,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+
     &__content {
       text-align: center;
       width: 70%;
       height: 100%;
+      position: relative;
       .title {
         font-size: 38px;
         margin-bottom: 38px;
       }
-      img {
+      .decoration {
         margin-bottom: 65px;
       }
       .info {
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 300;
+      }
+      .signature {
+        position: absolute;
+        bottom: -130px;
+        right: 0;
+        width: 180px;
+        height: 118px;
       }
     }
   }
