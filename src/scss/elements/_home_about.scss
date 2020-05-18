@@ -1,0 +1,33 @@
+.about {
+  margin: 80px 0;
+  background: $highlightBg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__content {
+      text-align: center;
+      width: 70%;
+      height: 100%;
+      .title {
+        font-size: 38px;
+        margin-bottom: 38px;
+      }
+      img {
+        margin-bottom: 65px;
+      }
+      .info {
+        font-size: 30px;
+        font-weight: 300;
+      }
+    }
+  }
+  &__img {
+    height: 100%;
+    width: 50%;
+  }
+}
