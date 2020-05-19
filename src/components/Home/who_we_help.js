@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Who_We_Help_Foundations} from "./who_we_help_structures";
+import {Who_We_Help_Structures} from "./who_we_help_structures";
 import {foundations, locals, nonProfit} from "./structuresData";
 
 export const Who_We_Help = () => {
@@ -29,10 +29,7 @@ export const Who_We_Help = () => {
                         </div>
                     </div>
 
-                    <Who_We_Help_Foundations choosenStructure={choosenStructure}/>
-
-
-
+                    <Who_We_Help_Structures choosenStructure={choosenStructure}/>
 
                 </div>
             </section>

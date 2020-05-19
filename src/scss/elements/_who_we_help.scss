@@ -71,4 +71,15 @@
       }
     }
   }
+  .pagin {
+    &__number {
+      text-decoration: none;
+      color: $mainText;
+      margin: 15px;
+      padding: 10px;
+      &.check {
+        border: 1px solid $mainText;
+      }
+    }
+  }
 }

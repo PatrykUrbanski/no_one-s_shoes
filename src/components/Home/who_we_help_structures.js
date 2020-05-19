@@ -3,9 +3,10 @@ import {foundations, locals, nonProfit} from "./structuresData";
 import {Who_We_Help_Pagination} from "./who_we_help_pagination";
 const uniqid = require('uniqid');
 
-export const Who_We_Help_Foundations = ({choosenStructure}) => {
+export const Who_We_Help_Structures = ({choosenStructure}) => {
     const [structure, setStructure] = useState(choosenStructure);
     const [currentPage, setCurrentPage] = useState(1);
+    const [checkedNumber, setCheckedNumber] = useState(0);
 
 
 
@@ -13,7 +14,8 @@ export const Who_We_Help_Foundations = ({choosenStructure}) => {
         choosenStructure === "foundations" && setStructure(foundations);
         choosenStructure === "nonProfit" && setStructure(nonProfit);
         choosenStructure === "locals" && setStructure(locals);
-        setCurrentPage(1)
+        setCurrentPage(1);
+        setCheckedNumber(0)
 
     }, [choosenStructure]);
 
@@ -22,8 +24,9 @@ export const Who_We_Help_Foundations = ({choosenStructure}) => {
     const totalElems = Object.keys(structure);
     const currentElems = totalElems.slice(indexOfFirstEl, indexOfLastEl);
 
-    const paginate = (number) => {
-        setCurrentPage(number)
+    const paginate = (number, index) => {
+        setCurrentPage(number);
+        setCheckedNumber(index)
     };
 
 
@@ -32,14 +35,14 @@ export const Who_We_Help_Foundations = ({choosenStructure}) => {
             <div className={"institution"}>
                 <p className={"institution__text"}>{structure.s1.description}</p>
                 {currentElems.map(key =>
-                        <div id={uniqid()} className={"institution__content"}>
+                        <div key={uniqid()} className={"institution__content"}>
                             <p className={"name"}>{structure[key].structureName}</p>
                             <span className={"description"}>{structure[key].structureName_description}</span>
                             <span className={"items"}>{structure[key].items}</span>
                         </div>
                     )}
             </div>
-            <Who_We_Help_Pagination totalElems={totalElems} paginate={paginate}/>
+            {(totalElems.length / 3) > 1 && <Who_We_Help_Pagination totalElems={totalElems} paginate={paginate} checkedNumber={checkedNumber}/>}
         </>
     )
 };
