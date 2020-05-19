@@ -1,9 +1,17 @@
-import React, {useState} from 'react';
-import {foundations, locals} from "./structuresData";
+import React, {useEffect, useState} from 'react';
+import {foundations, locals, nonProfit} from "./structuresData";
 const uniqid = require('uniqid');
 
-export const Who_We_Help_Foundations = () => {
-    const [structure, setStructure] = useState(locals);
+export const Who_We_Help_Foundations = ({choosenStructure}) => {
+    const [structure, setStructure] = useState(choosenStructure);
+
+
+    useEffect(() => {
+        choosenStructure === "foundations" && setStructure(foundations);
+        choosenStructure === "nonProfit" && setStructure(nonProfit);
+        choosenStructure === "locals" && setStructure(locals);
+    }, [choosenStructure]);
+
 
 
 
