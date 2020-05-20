@@ -8,3 +8,9 @@
  ![Landing Page](https://i.ibb.co/kGpk2Bz/Zrzut-ekranu-z-2020-05-18-12-46-31.png)
  
  
+Website build with:
+- React
+- HTML5
+- SASS
+- Webpack
+- fetchApi
