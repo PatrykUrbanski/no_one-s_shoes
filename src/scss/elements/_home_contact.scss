@@ -1,0 +1,85 @@
+.contact {
+  position: relative;
+  margin-top: 50px;
+  height: 900px;
+  &__bg {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    opacity: .3;
+    height: 100%;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 150px;
+    position: relative;
+    &__wrap {
+      &__headline {
+        text-align: center;
+        .title {
+          font-size: 38px;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+      }
+      &__form {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .personalData {
+          display: flex;
+          justify-content: space-between;
+          label {
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+            width: 45%;
+            input {
+              border: none;
+              border-bottom: 1px solid $mainText;
+              background: transparent;
+            }
+          }
+        }
+        .msg {
+          display: flex;
+          flex-direction: column;
+          margin-top: 30px;
+          textarea {
+            margin-top: 15px;
+            border: none;
+            border-bottom: 1px solid $mainText;
+            background: transparent;
+            height: 100px;
+          }
+        }
+        .sendFormBtn {
+          border: 1px solid $mainText;
+          background: transparent;
+          width: 30%;
+          position: absolute;
+          right: 0;
+          bottom: -65px;
+          padding: 13px 30px;
+          font-weight: 300;
+          font-size: 18px;
+        }
+      }
+    }
+    &__icons {
+      position: absolute;
+      bottom: 10px;
+      right: 150px;
+      font-size: 30px;
+      i {
+        margin-left: 20px;
+      }
+    }
+  }
+}
