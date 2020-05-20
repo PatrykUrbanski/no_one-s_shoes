@@ -83,3 +83,13 @@
     }
   }
 }
+
+.errorMsg {
+  font-size: 12px;
+  color: red;
+  margin-top: 8px;
+  display: none;
+  &.active {
+    display: inline-block;
+  }
+}
