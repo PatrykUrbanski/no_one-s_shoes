@@ -35,12 +35,18 @@
       width: 390px;
       justify-content: space-between;
       margin-top: 30px;
+      &.out {
+        justify-content: center;
+      }
       &__Elem {
         font-size: 18px;
         font-weight: 300;
         text-decoration: none;
         color: $mainText;
         padding: 13px 15px;
+        &.checked {
+          border: 1px solid $mainText;
+        }
       }
     }
   }

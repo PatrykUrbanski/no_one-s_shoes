@@ -4,11 +4,12 @@ import {App} from './App';
 import * as serviceWorker from './serviceWorker';
 import "./scss/main.scss"
 import {Login} from "./components/login/Login";
+import {LogOut} from "./components/login/logOut";
 
 ReactDOM.render(
   <React.StrictMode>
     {/*<App />*/}
-    <Login/>
+    <LogOut/>
   </React.StrictMode>,
   document.getElementById('root')
 );
