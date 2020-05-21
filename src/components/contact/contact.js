@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {isElementOfType} from "react-dom/test-utils";
 
 export const Contact = () => {
     const [name, setName] = useState("");
@@ -9,24 +10,72 @@ export const Contact = () => {
     const [msgErrMsg, setMsgErrMsg] = useState(false);
     const [emailErrMsg, setEmailErrMsg] = useState(false);
 
+    const [successMsg, setSuccessMsg] = useState(false);
+
+    const [checked, setChecked] = useState(false)
+
+    const resetForm = () => {
+    setName("");
+    setEmail("");
+    setMsg("")
+    };
 
 
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
+    const valid = () => {
+        setChecked(false);
         name.length < 1 || name.indexOf(" ") !== -1 ? setNameErrMsg(true) : setNameErrMsg(false);
         msg.length < 120 ? setMsgErrMsg(true) : setMsgErrMsg(false);
         email.length < 5 ? setEmailErrMsg(true) : setEmailErrMsg(false);
 
+        setChecked(true);
 
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-    const validateEmail = (email) => {
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-    };
+        valid();
+
+        setSuccessMsg(false);
+
+        if (!checked) {
+            return null;
+        } else {
+            if (nameErrMsg || msgErrMsg || emailErrMsg) {
+                return null;
+            }
+        }
+
+
+
+
+        const newMsg = {
+            name: name,
+            email: email,
+            message: msg
+        };
+
+        console.log("elo");
+
+        fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(newMsg),
+        }).then(response => {
+            response.json()
+                .then(data => {
+                    data.status === "success" && setSuccessMsg(true)
+                })
+        });
+
+
+        resetForm();
+
+        };
+
+
 
     return (
         <>
@@ -37,6 +86,7 @@ export const Contact = () => {
                         <div className={"contact__content__wrap__headline"}>
                             <h2 className={"title"}>Contact us</h2>
                             <img className={"decoration"} src="../../assets/Decoration.svg" alt={"deco"}/>
+                            <span className={`successMsg ${successMsg && "active"}`}>Message sent. We will contact your shortly.</span>
                         </div>
                         <form onSubmit={e => handleSubmit(e)} className={"contact__content__wrap__form"}>
                             <div className={"personalData"}>
@@ -56,7 +106,7 @@ export const Contact = () => {
                                 " officia praesentium quaerat, quam unde veniam vitae voluptas!"}/>
                                 <span className={`errorMsg ${msgErrMsg && "active"}`}>The message must be at least 120 characters.</span>
                             </label>
-                            <button type={"submit"} className={"sendFormBtn"}>Send</button>
+                            <button type={"submit"} className={"sendFormBtn"} onClick={e => handleSubmit(e)}>Send</button>
                         </form>
                     </div>
                 </div>
