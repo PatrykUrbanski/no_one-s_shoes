@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 export const Login = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+
     return (
         <>
             <section className={"login"}>
@@ -8,14 +12,20 @@ export const Login = () => {
                     <h2 className={"title"}>Log in</h2>
                     <img className={"decoration"} src="../../assets/Decoration.svg" alt={"deco"}/>
                     <form className={"form"}>
-                        <label>
-                            <input type={"email"} value={"email"}/>
+                        <label>Email
+                            <input type={"email"} value={email} onChange={e => setEmail(e.target.value)}/>
                         </label>
-                        <label>
-                            <input type={"password"} value={"password"}/>
+                        <label>Password
+                            <input type={"password"} value={password} onChange={e => setPassword(e.target.value)}/>
                         </label>
                     </form>
+                    <div className={"loginBtn"}>
+                        <a  href="#" className={"loginBtn__Elem"}>Sign up</a>
+                        <a  href="#" className={"loginBtn__Elem"}>Log In</a>
+                    </div>
                 </div>
+
+
             </section>
         </>
     )
