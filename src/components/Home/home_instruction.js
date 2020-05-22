@@ -1,10 +1,14 @@
 import React from 'react';
+import * as Scroll from 'react-scroll';
+import { Link as LinkScroll, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import {Link} from "react-router-dom";
 
 export const Home_instruction = () => {
 
     return (
         <>
             <section className={"instruction"}>
+                <Element name="instruction"/>
                 <div className={"instruction__title"}>
                     <h2 className={"instruction__title__text"}>It's so simple!</h2>
                     <img src="../../assets/Decoration.svg"/>
@@ -34,7 +38,7 @@ export const Home_instruction = () => {
                     </div>
                 </div>
                 <div className={"instruction__btn"}>
-                    <a className={"instruction__btn__elem"} href={"#"}>Oddaj rzeczy</a>
+                    <Link className={"instruction__btn__elem"} to="/login">Oddaj rzeczy</Link>
                 </div>
             </section>
         </>

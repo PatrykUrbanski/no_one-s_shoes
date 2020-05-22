@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {isElementOfType} from "react-dom/test-utils";
+import { Link as LinkScroll, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export const Contact = () => {
     const [name, setName] = useState("");
@@ -80,6 +80,7 @@ export const Contact = () => {
     return (
         <>
             <section className={"contact"}>
+                <Element name="contact"/>
                 <img className={"contact__bg"} src="../../assets/Background-Contact-Form.jpg" alt="bgContact"/>
                 <div className={"contact__content container"}>
                     <div className={"contact_content_wrap"}>

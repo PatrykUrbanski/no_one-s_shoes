@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link as LinkScroll, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export const Home_About = () => {
     return (
         <>
+            <Element name="about"/>
             <section className={"about"}>
                 <div className={"about__text"}>
                     <div className={"about__text__content"}>

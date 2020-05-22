@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from "react-router-dom";
 
 export const Login = () => {
     const [email, setEmail] = useState("");
@@ -20,8 +21,8 @@ export const Login = () => {
                         </label>
                     </form>
                     <div className={"loginBtn"}>
-                        <a  href="#" className={"loginBtn__Elem"}>Sign up</a>
-                        <a  href="#" className={"loginBtn__Elem checked"}>Log In</a>
+                        <Link  to="/signUp" className={"loginBtn__Elem"}>Sign up</Link>
+                        <Link  to="/login" className={"loginBtn__Elem checked"}>Log In</Link>
                     </div>
                 </div>
 

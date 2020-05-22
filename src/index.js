@@ -8,8 +8,7 @@ import {LogOut} from "./components/login/logOut";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/*<App />*/}
-    <LogOut/>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

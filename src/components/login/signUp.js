@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from "react-router-dom";
 
 export const SignUp = () => {
     const [email, setEmail] = useState("");
@@ -20,12 +21,12 @@ export const SignUp = () => {
                             <input type={"password"} value={password} onChange={e => setPassword(e.target.value)}/>
                         </label>
                         <label>Repeat Password
-                            <input type={"password"} value={password} onChange={e => setPassword(e.target.value)}/>
+                            <input type={"password"} value={repeatPassword} onChange={e => setRepeatPassword(e.target.value)}/>
                         </label>
                     </form>
                     <div className={"loginBtn"}>
-                        <a  href="#" className={"loginBtn__Elem checked"}>Sign up</a>
-                        <a  href="#" className={"loginBtn__Elem"}>Log In</a>
+                        <Link  to="/signUp" className={"loginBtn__Elem checked"}>Sign up</Link>
+                        <Link  to="/login" className={"loginBtn__Elem"}>Log In</Link>
                     </div>
                 </div>
 
