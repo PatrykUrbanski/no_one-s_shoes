@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
+import {Donate_Warn} from "./donate_warning";
 
 export const Donate_Banner = () => {
 
@@ -10,7 +11,7 @@ export const Donate_Banner = () => {
                 <div className={"banner__content container"}>
                     <div className={"banner__content__mainBox"}>
                         <h1 className={"title"}>
-                            <span>Donate things you don't need to those who do!</span>
+                            <span>Donate things you don't need to those who does!</span>
                             <img src="../../assets/Decoration.svg"/>
                             <span>It's so simple.</span>
                         </h1>
@@ -43,7 +44,6 @@ export const Donate_Banner = () => {
                                     <span>Order a pickup.</span>
                                 </div>
                             </span>
-
                         </div>
                     </div>
                 </div>

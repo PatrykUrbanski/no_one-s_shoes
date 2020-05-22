@@ -1,0 +1,86 @@
+.donateForm {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &__bg {
+    z-index: -1;
+    width: 100%;
+  }
+  .wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    .step {
+      font-size: 24px;
+      margin-top: 36px;
+      margin-bottom: 70px;
+      font-weight: 300;
+      opacity: .5;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      &__elem {
+        font-weight: 300;
+        font-size: 24px;
+        margin: 20px 20px;
+        text-transform: uppercase;
+        position: relative;
+        &:hover .checkbox ~ .checkmark {
+          background-color: $mainHL;
+          opacity: .4;
+        }
+        .checkbox:checked ~ .checkmark {
+          background-color: $mainHL;
+        }
+        .checkbox {
+          margin-right: 20px;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+        .checkmark {
+          height: 25px;
+          width: 25px;
+          border: 1px solid $mainText;
+          position: absolute;
+          top: 0;
+          left: -15px;
+        }
+      }
+      &__numberOfBags {
+        font-size: 24px;
+        font-weight: 300;
+        input {
+          background: transparent;
+          margin-left: 20px;
+        }
+      }
+      .nextBtn {
+        text-decoration: none;
+        color: $mainText;
+        font-size: 24px;
+        text-align: center;
+        padding: 20px 30px;
+        max-width: 140px;
+        border: 1px solid $mainText;
+        margin-top: 150px;
+
+      }
+    }
+  }
+}
