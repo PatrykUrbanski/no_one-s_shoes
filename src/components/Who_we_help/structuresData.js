@@ -1,47 +1,47 @@
 export const foundations = {
     s1: {
-        description: "lorem asdasda sdasddasdasdasd asdasda dasdasdasda ddasdas  dasdasdadada dadasdadasdasdadasdas dasdaddasdasdasdasdad adadadasddasdasdadas dasdasdaddasdasdasd asdadadadadasddasdasdad asdasdasdaddasdasdasdasdadadadadasdda sdasdadasdasdasdadda sdasdasdasdadad adadasddasdas dadasdasdasd addasdasdasdas dadadadadasd",
-        structureName: "fundacja Dbam o zdrowie",
+        description: "The foundations we selected undergo a thorough verification process to obtain the status of a Trusted Foundation. Every day, we work directly with the founders and employees of the foundations to help them manage donated items as effectively as possible.",
+        structureName: "Foundation XYZ",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s2: {
-        structureName: "fundacja Dbam o zdrowie",
+        structureName: "Foundation ABC",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s3: {
-        structureName: "fundacja Dbam o zdrowie",
+        structureName: "Foundation XXX",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s4: {
-        structureName: "fundacja Dbam o zdrowiexxx",
+        structureName: "Foundation Best",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s5: {
-        structureName: "fundacja Dbam o zdrowiexxx",
+        structureName: "Foundation Best Ever",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s6: {
-        structureName: "fundacja Dbam o zdrowiexxx",
+        structureName: "Foundation That's one truly best",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s7: {
-        structureName: "fundacja Dbam o zdrowiexxxxxxxxxx",
+        structureName: "Foundation Even better",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s8: {
-        structureName: "fundacja Dbam o zdrowiexxxxxxxx",
+        structureName: "Foundation Yeah pick me",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s9: {
-        structureName: "fundacja Dbam o zdrowiexxxxxxxxxxx",
+        structureName: "Foundation Not so good",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     }
@@ -49,28 +49,28 @@ export const foundations = {
 
 export const nonProfit = {
     s1: {
-        description: "lorem asdasda sdasddasdasdasd asdasda dasdasdasda ddasdas  dasdasdadada dadasdadasdasdadasdas dasdaddasdasdasdasdad adadadasddasdasdadas dasdasdaddasdasdasd asdadadadadasddasdasdad asdasdasdaddasdasdasdasdadadadadasdda sdasdadasdasdasdadda sdasdasdasdadad adadasddasdas dadasdasdasd addasdasdasdas dadadadadasd",
-        structureName: "nonProfit Dbam o zdrowie",
+        description: "We work with national and international non-profit organizations that privide better living conditions to people all around the world.",
+        structureName: "Red Cross",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s2: {
-        structureName: "nonProfit  Dbam o zdrowie",
+        structureName: "Unicef",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s3: {
-        structureName: "nonProfit Dbam o zdrowie",
+        structureName: "Global Health",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s4: {
-        structureName: "nonProfit  Dbam o zdrowie",
+        structureName: "Nice and warm",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s5: {
-        structureName: "nonProfit Dbam o zdrowie",
+        structureName: "Take care",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     }
@@ -79,18 +79,18 @@ export const nonProfit = {
 
 export const locals = {
     s1: {
-        description: "lorem asdasda sdasddasdasdasd asdasda dasdasdasda ddasdas  dasdasdadada dadasdadasdasdadasdas dasdaddasdasdasdasdad adadadasddasdasdadas dasdasdaddasdasdasd asdadadadadasddasdasdad asdasdasdaddasdasdasdasdadadadadasdda sdasdadasdasdasdadda sdasdasdasdadad adadasddasdas dadasdasdasd addasdasdasdas dadadadadasd",
-        structureName: "lokalne Dbam o zdrowie",
+        description: "We choose trusted collections from our partners and supporters",
+        structureName: "Wroclaw's Orphanage",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s2: {
-        structureName: "lokalne Dbam o zdrowie",
+        structureName: "Warsaw's special schools",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     },
     s3: {
-        structureName: "lokalne Dbam o zdrowie",
+        structureName: "Krakow's homeless shelter",
         structureName_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         items: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     }

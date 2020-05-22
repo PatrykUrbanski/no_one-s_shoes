@@ -15,8 +15,8 @@ export const Banner = () => {
                             <img src="../../assets/Decoration.svg"/>
                         </h1>
                         <div className={"buttons"}>
-                            <a className={"buttons__elem"}>Give!</a>
-                            <a className={"buttons__elem"}>Arrange pickup</a>
+                            <Link to="/login" className={"buttons__elem"}>Donate!</Link>
+                            <Link to="/login" className={"buttons__elem"}>Arrange pickup.</Link>
                         </div>
                     </div>
                 </div>
