@@ -41,6 +41,34 @@
           text-decoration: none;
           color: $mainText;
           }
+        &.donate {
+          justify-content: center;
+        }
+        &__card {
+          font-weight: 300;
+          font-size: 14px;
+          position: relative;
+
+          i {
+            font-size: 150px;
+            opacity: .5;
+            z-index: -1;
+            color: $mainText;
+            transform: rotate(45deg);
+          }
+          .text {
+            position: absolute;
+            top: calc(50% - 28px/2);
+            left: calc(50% - 65px/2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span {
+              text-align: center;
+
+            }
+            }
+          }
         }
       }
     }
