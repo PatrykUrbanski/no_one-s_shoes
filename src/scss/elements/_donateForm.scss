@@ -33,6 +33,31 @@
     .form {
       display: flex;
       flex-direction: column;
+      &__cities {
+        background: transparent;
+        width: 300px;
+        border: 1px solid $mainText;
+        font-size: 24px;
+        option {
+          background-color: #e8e8e6;
+        }
+      }
+      &__subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        &.organisationField {
+          display: flex;
+          flex-direction: column;
+          width: 700px;
+          input {
+            background-color: #e8e8e6;
+            margin-top: 10px;
+            border: 1px solid $mainText;
+          }
+        }
+      }
       &__elem {
         font-weight: 300;
         font-size: 24px;
@@ -60,6 +85,46 @@
           position: absolute;
           top: 0;
           left: -15px;
+          &.help {
+            height: 0;
+            width: 0;
+            left: 0;
+          }
+        }
+      }
+      &__elemHelp {
+        display: flex;
+        width: 700px;
+        flex-wrap: wrap;
+        font-weight: 300;
+        font-size: 24px;
+        text-transform: uppercase;
+        &__box {
+          margin: 20px 20px;
+          padding: 11px 26px;
+          border: 1px solid $mainText;
+          position: relative;
+          cursor: pointer;
+          z-index: 3;
+          .checkbox:checked ~ .checkmark {
+            background: $mainHL;
+          }
+          .checkmark {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+          }
+          .checkbox {
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            cursor: pointer;
+          }
+
         }
       }
       &__numberOfBags {
@@ -70,16 +135,21 @@
           margin-left: 20px;
         }
       }
-      .nextBtn {
-        text-decoration: none;
-        color: $mainText;
+      .btn {
+        display: flex;
         font-size: 24px;
-        text-align: center;
-        padding: 20px 30px;
-        max-width: 140px;
-        border: 1px solid $mainText;
-        margin-top: 150px;
-
+        position: absolute;
+        bottom: 100px;
+        &__elem {
+          text-decoration: none;
+          color: $mainText;
+          text-align: center;
+          padding: 20px 30px;
+          max-width: 140px;
+          border: 1px solid $mainText;
+          margin-right: 50px;
+          font-weight: 300;
+        }
       }
     }
   }

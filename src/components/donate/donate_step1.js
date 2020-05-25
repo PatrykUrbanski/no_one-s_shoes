@@ -21,7 +21,9 @@ export const Donate_step1 = () => {
                                 </label>
                             </>
                         )}
-                        <a className="nextBtn" href="#">Next</a>
+                        <div className={"btn"}>
+                            <a className="btn__elem" href="#">Next</a>
+                        </div>
                     </form>
             </div>
         </>

@@ -4,7 +4,7 @@ const uniqid = require('uniqid');
 
 export const Donate_step2 = () => {
 
-    const selectItems = ["clothes", "shoes", "toys", "books", "other"];
+
 
     return (
         <>
@@ -15,9 +15,10 @@ export const Donate_step2 = () => {
                     <label className={"form__numberOfBags"}>Enter number of bags:
                         <input type={"number"} name={"numberOfBags"}/>
                     </label>
-
-                    <a className="nextBtn" href="#">Back</a>
-                    <a className="nextBtn" href="#">Next</a>
+                    <div className={"btn"}>
+                        <a className="btn__elem" href="#">Back</a>
+                        <a className="btn__elem" href="#">Next</a>
+                    </div>
                 </form>
             </div>
         </>
