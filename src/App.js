@@ -7,6 +7,8 @@ import {Who_We_Help} from "./components/Who_we_help/who_we_help";
 import {Contact} from "./components/contact/contact";
 import {Login} from "./components/login/Login";
 import {SignUp} from "./components/login/signUp";
+import {Donate_Form} from "./components/donate/donate_form";
+import {Donate} from "./components/donate/donate";
 
 
 export const App = () => {
@@ -15,9 +17,10 @@ export const App = () => {
           <>
           <Header/>
           <Switch>
+              <Route exact path="/" component={Home}/>
               <Route path="/login" component={Login}/>
               <Route path="/signUp" component={SignUp}/>
-              <Route exact path="/" component={Home}/>
+              <Route path="/donate" component={Donate}/>
           </Switch>
           </>
       </HashRouter>

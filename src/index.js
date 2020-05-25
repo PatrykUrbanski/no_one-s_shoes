@@ -10,8 +10,7 @@ import {Donate} from "./components/donate/donate";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/*<App />*/}
-    <Donate/>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

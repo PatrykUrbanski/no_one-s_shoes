@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useRouteMatch} from "react-router-dom";
 const uniqid = require('uniqid');
 
 export const Donate_step2 = () => {
-
 
 
     return (
@@ -16,8 +15,8 @@ export const Donate_step2 = () => {
                         <input type={"number"} name={"numberOfBags"}/>
                     </label>
                     <div className={"btn"}>
-                        <a className="btn__elem" href="#">Back</a>
-                        <a className="btn__elem" href="#">Next</a>
+                        <Link className="btn__elem" to={`/donate`}>Back</Link>
+                        <Link className="btn__elem" to="/donate/step3">Next</Link>
                     </div>
                 </form>
             </div>
