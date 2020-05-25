@@ -13,8 +13,6 @@ export const Who_We_Help = () => {
         setClickedBtn(name)
     };
 
-
-
     return (
         <>
             <section className="whoWeHelp">
@@ -28,11 +26,9 @@ export const Who_We_Help = () => {
                             <a className={`btn__elem ${clickedBtn === "locals" && "check"}`} name={"locals"} href={"#"} onClick={e => handleClick(e)}>Locals collections</a>
                         </div>
                     </div>
-
                     <Who_We_Help_Structures choosenStructure={choosenStructure}/>
-
                 </div>
             </section>
         </>
     )
-}
+};

@@ -16,14 +16,14 @@ export const App = () => {
   return (
       <HashRouter>
           <>
-          <Header/>
-          <Switch>
-              <Route exact path="/" component={Home}/>
-              <Route path="/login" component={Login}/>
-              <Route path="/signUp" component={SignUp}/>
-              <Route path="/logOut" component={LogOut}/>
-              <Route path="/donate" component={Donate}/>
-          </Switch>
+              <Header/>
+              <Switch>
+                  <Route exact path="/" component={Home}/>
+                  <Route path="/login" component={Login}/>
+                  <Route path="/signUp" component={SignUp}/>
+                  <Route path="/logOut" component={LogOut}/>
+                  <Route path="/donate" component={Donate}/>
+              </Switch>
           </>
       </HashRouter>
   )

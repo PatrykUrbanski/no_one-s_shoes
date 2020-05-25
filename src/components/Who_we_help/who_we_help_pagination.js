@@ -4,8 +4,6 @@ var uniqid = require('uniqid');
 export const Who_We_Help_Pagination = ({totalElems, paginate, checkedNumber}) => {
     const pageNumbers = [];
 
-
-
     for (let i = 1; i <= Math.ceil(totalElems.length / 3); i++) {
         pageNumbers.push(i)
     }
@@ -13,7 +11,6 @@ export const Who_We_Help_Pagination = ({totalElems, paginate, checkedNumber}) =>
     const handleClick = (e, number, index) => {
         e.preventDefault();
         paginate(number, index);
-
     };
 
     return (

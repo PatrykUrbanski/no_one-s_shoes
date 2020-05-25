@@ -8,13 +8,10 @@ export const Login = () => {
     const [password, setPassword] = useState("");
     const [errorMsg, setErrorMsg] = useState(false);
 
-
     let history = useHistory();
 
 
-
     const handleLogin = () => {
-
         firebaseInit();
 
         if (!email || !password) {
@@ -29,16 +26,7 @@ export const Login = () => {
             .catch(function(error) {
             setErrorMsg(error.message)
         });
-
     };
-
-
-
-
-
-
-
-
 
 
     return (
@@ -61,9 +49,8 @@ export const Login = () => {
                         <Link  to="/login" className={"loginBtn__Elem checked"} onClick={handleLogin}>Log In</Link>
                     </div>
                 </div>
-
-
             </section>
         </>
     )
-}
+};
+

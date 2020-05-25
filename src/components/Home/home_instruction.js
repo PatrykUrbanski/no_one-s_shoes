@@ -1,5 +1,4 @@
 import React from 'react';
-import * as Scroll from 'react-scroll';
 import { Link as LinkScroll, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import {Link} from "react-router-dom";
 

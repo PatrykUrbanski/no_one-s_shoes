@@ -25,4 +25,4 @@ export const Home_Columns = () => {
             </section>
         </>
     )
-}
+};

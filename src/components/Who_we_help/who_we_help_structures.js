@@ -9,14 +9,12 @@ export const Who_We_Help_Structures = ({choosenStructure}) => {
     const [checkedNumber, setCheckedNumber] = useState(0);
 
 
-
     useEffect(() => {
         choosenStructure === "foundations" && setStructure(foundations);
         choosenStructure === "nonProfit" && setStructure(nonProfit);
         choosenStructure === "locals" && setStructure(locals);
         setCurrentPage(1);
         setCheckedNumber(0)
-
     }, [choosenStructure]);
 
     const indexOfLastEl = currentPage * 3;
@@ -28,7 +26,6 @@ export const Who_We_Help_Structures = ({choosenStructure}) => {
         setCurrentPage(number);
         setCheckedNumber(index)
     };
-
 
     return (
         <>

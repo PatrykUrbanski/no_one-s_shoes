@@ -1,43 +1,52 @@
 .login {
   height: 80vh;
+
   &__content {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     .title {
       font-size: 40px;
       margin-bottom: 37px;
     }
+
     .decoration {
       margin-bottom: 30px;
     }
+
     .successInfo {
       margin-bottom: 40px;
       border: 1px solid $mainHL;
       padding: 20px 20px;
       display: none;
+
       a {
         color: $mainText;
         font-weight: 700;
       }
     }
+
     .errorInfo {
       margin-bottom: 40px;
       border: 1px solid red;
       padding: 20px 20px;
       display: none;
     }
+
     .form {
       background-color: $highlightBg;
       display: flex;
       flex-direction: column;
+
       label {
         padding: 30px 60px;
         font-size: 16px;
         display: flex;
         flex-direction: column;
+
         input {
           border: none;
           background: transparent;
@@ -46,25 +55,28 @@
         }
       }
     }
+
     .loginBtn {
       display: flex;
       width: 390px;
       justify-content: space-between;
       margin-top: 30px;
+
       &.out {
         justify-content: center;
       }
+
       &__Elem {
         font-size: 18px;
         font-weight: 300;
         text-decoration: none;
         color: $mainText;
         padding: 13px 15px;
+
         &.checked {
           border: 1px solid $mainText;
         }
       }
     }
   }
-
 }

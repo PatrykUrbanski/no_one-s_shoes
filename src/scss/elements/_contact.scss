@@ -2,6 +2,7 @@
   position: relative;
   margin-top: 50px;
   height: 900px;
+
   &__bg {
     position: absolute;
     top: 0;
@@ -9,6 +10,7 @@
     opacity: .3;
     height: 100%;
   }
+
   &__content {
     display: flex;
     justify-content: center;
@@ -17,31 +19,38 @@
     flex-direction: column;
     margin-right: 150px;
     position: relative;
+
     &__wrap {
+
       &__headline {
         text-align: center;
         display: flex;
         flex-direction: column;
+
         .title {
           font-size: 38px;
           text-align: center;
           margin-bottom: 20px;
         }
       }
+
       &__form {
         margin-top: 30px;
         display: flex;
         flex-direction: column;
         position: relative;
+
         .personalData {
           display: flex;
           justify-content: space-between;
+
           label {
             font-size: 16px;
             display: flex;
             flex-direction: column;
             margin-bottom: 15px;
             width: 45%;
+
             input {
               border: none;
               border-bottom: 1px solid $mainText;
@@ -49,10 +58,12 @@
             }
           }
         }
+
         .msg {
           display: flex;
           flex-direction: column;
           margin-top: 30px;
+
           textarea {
             margin-top: 15px;
             border: none;
@@ -61,6 +72,7 @@
             height: 100px;
           }
         }
+
         .sendFormBtn {
           border: 1px solid $mainText;
           background: transparent;
@@ -74,11 +86,13 @@
         }
       }
     }
+
     &__icons {
       position: absolute;
       bottom: 10px;
       right: 150px;
       font-size: 30px;
+
       i {
         margin-left: 20px;
       }
@@ -92,6 +106,7 @@
   margin-top: 8px;
   display: none;
 }
+
 .successMsg {
   font-size: 18px;
   color: green;
@@ -99,6 +114,7 @@
   display: none;
 
 }
+
 .active {
    display: inline-block;
 }
