@@ -9,6 +9,7 @@ import {Login} from "./components/login/Login";
 import {SignUp} from "./components/login/signUp";
 import {Donate_Form} from "./components/donate/donate_form";
 import {Donate} from "./components/donate/donate";
+import {LogOut} from "./components/login/logOut";
 
 
 export const App = () => {
@@ -20,6 +21,7 @@ export const App = () => {
               <Route exact path="/" component={Home}/>
               <Route path="/login" component={Login}/>
               <Route path="/signUp" component={SignUp}/>
+              <Route path="/logOut" component={LogOut}/>
               <Route path="/donate" component={Donate}/>
           </Switch>
           </>

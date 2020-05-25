@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from "react-router-dom";
 
 export const LogOut = () => {
     return (
@@ -8,7 +9,7 @@ export const LogOut = () => {
                     <h2 className={"title"}>You have successfully logged out! See you soon!</h2>
                     <img className={"decoration"} src="../../assets/Decoration.svg" alt={"deco"}/>
                     <div className={"loginBtn out"}>
-                        <a  href="#" className={"loginBtn__Elem checked"}>Home Page</a>
+                        <Link  to="/" className={"loginBtn__Elem checked"}>Home Page</Link>
                     </div>
                 </div>
             </section>

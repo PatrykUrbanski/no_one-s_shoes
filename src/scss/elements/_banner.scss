@@ -1,5 +1,6 @@
 .banner{
   height: 90vh;
+
   &__Bg {
     position: absolute;
     z-index: -1;
@@ -8,28 +9,34 @@
     width: 1368px;
     height: 963px;
   }
+
   &__content {
     position: relative;
     display: flex;
     justify-content: flex-end;
     height: 100%;
+
     &__mainBox {
       margin: 220px 133px;
+
       .title {
         display: flex;
         flex-direction: column;
         font-size: 38px;
         text-align: center;
         line-height: 55px;
+
         img {
           margin-top: 25px;
         }
       }
+
       .buttons {
         font-size: 36px;
         display: flex;
         justify-content: space-between;
         margin-top: 65px;
+
         &__elem {
           font-weight: 300;
           border: 1px solid $mainText;
@@ -40,10 +47,12 @@
           justify-content: center;
           text-decoration: none;
           color: $mainText;
-          }
+        }
+
         &.donate {
           justify-content: center;
         }
+
         &__card {
           font-weight: 300;
           font-size: 14px;
@@ -59,25 +68,28 @@
             color: $mainText;
             transform: rotate(45deg);
           }
+
           .text {
             position: absolute;
             display: flex;
             flex-direction: column;
             align-items: center;
             font-weight: 700;
+
             span {
               text-align: center;
               width: 70%;
+
               &:first-child {
                 font-size: 28px;
                 margin-bottom: 10px;
               }
-            }
             }
           }
         }
       }
     }
   }
+}
 
 
