@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import { Link as LinkScroll, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import * as firebase from "firebase";
@@ -7,22 +7,25 @@ import {firebaseInit} from "../login/firebaseConfig";
 
 export const Header = () => {
     const [userName, setUserName] = useState(false);
+    const [reload, setReload] = useState(false);
 
-    firebaseInit();
-
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            setUserName(user.email);
-        }else {
-            console.log("no user")
-        }
-    });
-
+    useEffect(() => {
+        firebaseInit();
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                setUserName(user.email);
+            }
+            else {
+                setUserName(false)
+            }
+        });
+    }, [reload]);
 
     const handleLogOut = () => {
         firebase.auth().signOut()
             .then()
-            .catch(error => console.log(error))
+            .catch(error => console.log(error));
+        setReload(!reload)
     };
 
     return (

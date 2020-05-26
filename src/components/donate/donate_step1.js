@@ -18,7 +18,8 @@ export const Donate_step1 = () => {
         if (e.target.checked) {
             setSelectedItems(prevState => [...prevState, value]);
         }
-        setChecked(!checked);
+
+
         console.log(selectedItems)
     };
 
@@ -31,7 +32,8 @@ export const Donate_step1 = () => {
                     <form className={"form"}>
                         {selectItems.map(item =>
                             <label key={uniqid()} className={"form__elem"}>
-                                <input className={"checkbox"} type={"checkbox"} name={item} value={item} defaultChecked={checked} onChange={handleSubmit}/>
+                                <input className={"checkbox"} type={"checkbox"} name={item} value={item}
+                                       onChange={handleSubmit}/>
                                 <span className={"checkmark"}/>
                                 {item}
                             </label>

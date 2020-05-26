@@ -21,7 +21,7 @@ export const Login = () => {
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(response => response)
             .then(data => {
-                history.push("/")
+                history.push("/donate")
             })
             .catch(function(error) {
             setErrorMsg(error.message)

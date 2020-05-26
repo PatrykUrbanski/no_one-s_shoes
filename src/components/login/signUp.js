@@ -52,7 +52,7 @@ export const SignUp = () => {
                 <div className={"login__content container"}>
                     <h2 className={"title"}>Sign Up</h2>
                     <img className={"decoration"} src="../../assets/Decoration.svg" alt={"deco"}/>
-                    <h3 className={"successInfo"} style={{display: `${success ? "block" : "none"}`}}>You have successfully registered! <Link to={"/login"}>You can log in right now.</Link></h3>
+                    <h3 className={"successInfo"} style={{display: `${success ? "block" : "none"}`}}>You have successfully registered! <Link to={"/donate"}>You can start donating right now!</Link></h3>
                     <h3 className={"errorInfo"} style={{display: `${errorMsg ? "block" : "none"}`}}>{errorMsg}</h3>
                     <form className={"form"}>
                         <label>Email
