@@ -6,7 +6,7 @@ export const Banner = () => {
     return (
         <>
             <section className={"banner"}>
-                <img className={"banner__Bg"} alt="bannerBg" src="../../assets/Home-Hero-Image.jpg"/>
+                {/*<img className={"banner__Bg"} alt="bannerBg" src="../../assets/Home-Hero-Image.jpg"/>*/}
                 <div className={"banner__content container"}>
                     <div className={"banner__content__mainBox"}>
                         <h1 className={"title"}>
