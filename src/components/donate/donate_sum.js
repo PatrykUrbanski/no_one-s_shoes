@@ -15,7 +15,7 @@ export const DonateSum = () => {
                 <div className={"donateInfo"}>You're donating:
                     <span className={"donateInfo__details"}>
                         <img className={"box__icon"} src="../../assets/Icon-1.svg" alt={"icon"}/>
-                        {data.bags}, {data.items.join(", ")}, to {data.helpGroups.join(", ")}
+                        {data.bags} bags, {data.items.join(", ")}, to {data.helpGroups.join(", ")}
                     </span>
                     <span className={"donateInfo__details"}>
                         <img className={"box__icon"} src="../../assets/Icon-4.svg" alt={"icon"}/>

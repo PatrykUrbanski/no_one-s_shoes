@@ -2,6 +2,7 @@
   position: relative;
   margin-top: 50px;
   height: 900px;
+  width: 100%;
 
   &__bg {
     position: absolute;
@@ -9,6 +10,7 @@
     z-index: -1;
     opacity: .3;
     height: 100%;
+    width: 100%;
   }
 
   &__content {
