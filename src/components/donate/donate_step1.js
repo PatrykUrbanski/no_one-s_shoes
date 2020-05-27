@@ -1,27 +1,31 @@
-import React, {useEffect, useState} from 'react';
-import {Link, NavLink, useRouteMatch} from "react-router-dom";
+import React, {useContext, useState} from 'react';
+import {Link, useRouteMatch} from "react-router-dom";
+import {FormContext} from "../context/FormContext";
 
 const uniqid = require('uniqid');
 
-export const Donate_step1 = () => {
-    let {path, url} = useRouteMatch();
+export const DonateStep1 = () => {
+    let {path} = useRouteMatch();
     const selectItems = ["clothes", "shoes", "toys", "books", "other"];
 
     const [selectedItems, setSelectedItems] = useState([]);
-    const [checked, setChecked] = useState(false);
+    const [clicked, setClicked] = useState([-1]);
 
+    const accessData = useContext(FormContext);
 
-    const handleSubmit = (e) => {
+    const handleCheck = (e, index) => {
         e.preventDefault();
         const {value} = e.target;
-        e.target.checked;
         if (e.target.checked) {
-            setSelectedItems(prevState => [...prevState, value]);
+            setSelectedItems([...selectedItems, value]);
+            setClicked([...clicked, index])
         }
-
-
-        console.log(selectedItems)
+        accessData.setFormData(prevState => ({
+            ...prevState,
+            items: selectedItems
+        }));
     };
+
 
 
     return (
@@ -30,10 +34,10 @@ export const Donate_step1 = () => {
                     <span className={"step"}>Step: 1/4</span>
                     <h2 className={"title"}>Choose things you want to donate:</h2>
                     <form className={"form"}>
-                        {selectItems.map(item =>
+                        {selectItems.map((item, index) =>
                             <label key={uniqid()} className={"form__elem"}>
                                 <input className={"checkbox"} type={"checkbox"} name={item} value={item}
-                                       onChange={handleSubmit}/>
+                                       onClick={e => handleCheck(e, index)} defaultChecked={clicked.indexOf(index) !== -1 && true}/>
                                 <span className={"checkmark"}/>
                                 {item}
                             </label>
@@ -46,4 +50,5 @@ export const Donate_step1 = () => {
             </div>
         </>
     )
-}
+};
+

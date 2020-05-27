@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import {Donate_step1} from "./donate_step1";
-import {Donate_step2} from "./donate_step2";
-import {Donate_step3} from "./donate_step3";
-import {Donate_step4} from "./donate_step4";
+import {DonateStep1} from "./donate_step1";
+import {DonateStep2} from "./donate_step2";
+import {DonateStep3} from "./donate_step3";
+import {DonateStep4} from "./donate_step4";
 import {Route, Switch, useRouteMatch} from "react-router-dom";
-import {Donate_sum} from "./donate_sum";
+import {DonateSum} from "./donate_sum";
+import {FormContextProvider} from "../context/FormContext";
 
 
-export const Donate_Form = () => {
+export const DonateForm = () => {
     let {path} = useRouteMatch();
 
     return (
@@ -16,13 +17,15 @@ export const Donate_Form = () => {
                 <img className={"donateForm__bg"} src="../../assets/Background-Form.jpg" alt={"donateForm_bg"}/>
                 <div className={"wrap"}>
                     <div className={"container"}>
+                        <FormContextProvider>
                         <Switch>
-                            <Route exact path={`${path}/`} component={Donate_step1}/>
-                            <Route path={`${path}/step2`} component={Donate_step2}/>
-                            <Route path={`${path}/step3`} component={Donate_step3}/>
-                            <Route path={`${path}/step4`} component={Donate_step4}/>
-                            <Route path={`${path}/donate_sum`} component={Donate_sum}/>
+                            <Route exact path={`${path}/`} component={DonateStep1}/>
+                            <Route path={`${path}/step2`} component={DonateStep2}/>
+                            <Route path={`${path}/step3`} component={DonateStep3}/>
+                            <Route path={`${path}/step4`} component={DonateStep4}/>
+                            <Route path={`${path}/donate_sum`} component={DonateSum}/>
                         </Switch>
+                        </FormContextProvider>
                     </div>
                 </div>
             </section>

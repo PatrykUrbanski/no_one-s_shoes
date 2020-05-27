@@ -1,8 +1,6 @@
-import React, {useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
-import {Donate_Warn} from "./donate_warning";
+import React from 'react';
 
-export const Donate_Banner = () => {
+export const DonateBanner = () => {
 
     return (
         <>
