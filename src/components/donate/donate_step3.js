@@ -52,9 +52,9 @@ export const DonateStep3 = () => {
                         <input type={"text"} value={specialOrganization} onChange={e => setSpecialOrganization(e.target.value)}/>
                     </label>
 
-                    <div className={"btn"}>
-                        <Link className="btn__elem" to="/donate/step2">Back</Link>
-                        <Link className="btn__elem" to="/donate/step4">Next</Link>
+                    <div className={"formBtn"}>
+                        <Link className="formBtn__elem" to="/donate/step2">Back</Link>
+                        <Link className="formBtn__elem" to="/donate/step4">Next</Link>
                     </div>
                 </form>
             </div>

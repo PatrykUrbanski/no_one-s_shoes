@@ -16,11 +16,12 @@ export const DonateStep4 = () => {
 
     const handleAddData = () => {
         accessData.setFormData(prevState => ({
+            ...prevState,
             specificContact: {
                 ...prevState.specificContact,
                 street: street,
                 city: city,
-                posCode: postCode,
+                postCode: postCode,
                 phone: phone,
                 day: day,
                 time: time,
@@ -65,9 +66,9 @@ export const DonateStep4 = () => {
                     </div>
 
 
-                    <div className={"btn"}>
-                        <Link className="btn__elem" to="/donate/step3">Back</Link>
-                        <Link className="btn__elem" to="/donate/donate_sum" onClick={handleAddData}>Next</Link>
+                    <div className={"formBtn"}>
+                        <Link className="formBtn__elem" to="/donate/step3">Back</Link>
+                        <Link className="formBtn__elem" to="/donate/donate_sum" onClick={handleAddData}>Next</Link>
                     </div>
                 </form>
             </div>

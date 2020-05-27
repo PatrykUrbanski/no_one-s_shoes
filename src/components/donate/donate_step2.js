@@ -26,9 +26,9 @@ export const DonateStep2 = () => {
                     <label className={"form__numberOfBags"}>Enter number of bags:
                         <input type={"number"} name={"numberOfBags"} value={bagsNumber} onChange={e => setBagsNumber(e.target.value)}/>
                     </label>
-                    <div className={"btn"}>
-                        <Link className="btn__elem" to={`/donate`}>Back</Link>
-                        <Link className="btn__elem" to="/donate/step3" onClick={handleAddData}>Next</Link>
+                    <div className={"formBtn"}>
+                        <Link className="formBtn__elem" to={`/donate`}>Back</Link>
+                        <Link className="formBtn__elem" to="/donate/step3" onClick={handleAddData}>Next</Link>
                     </div>
                 </form>
             </div>

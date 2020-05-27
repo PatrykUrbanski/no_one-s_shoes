@@ -43,8 +43,8 @@ export const DonateStep1 = () => {
                             </label>
                         )}
 
-                        <div className={"btn"}>
-                            <Link className="btn__elem" to={`${path}step2`}>Next</Link>
+                        <div className={"formBtn"}>
+                            <Link className="formBtn__elem" to={`${path}step2`}>Next</Link>
                         </div>
                     </form>
             </div>
