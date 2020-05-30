@@ -24,6 +24,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
+      flex-wrap: wrap;
       height: 100%;
 
       .box {
@@ -37,10 +38,13 @@
         }
 
         &__name {
-          font-size: 18px;
           position: relative;
           margin-bottom: 18px;
           text-align: center;
+          font-size: 14px;
+          @include tablet {
+            font-size: 18px;
+          }
 
           &::after {
             content: "";
@@ -54,7 +58,12 @@
         }
 
         &__text {
-          font-size: 12px;
+          display: none;
+          @include tablet {
+            font-size: 12px;
+            display: inline-block;
+          }
+
         }
       }
     }
