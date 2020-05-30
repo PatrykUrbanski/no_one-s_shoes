@@ -5,6 +5,7 @@
   right: 0;
   background: transparent;
   z-index: 10;
+  transition: .3s;
 
   &__content {
 
@@ -47,6 +48,7 @@
     &__nav {
       @media (max-width: 767px) {
         height: 110vh;
+        width: 0;
         position: fixed;
         top: 0;
         left: 0;
@@ -71,6 +73,10 @@
           transform-origin: 0 0;
           transform: skew(-14deg) translateX(0);
           opacity: .9;
+        }
+        &.showMobileNav {
+          width: 100vw;
+          opacity: 1;
         }
 
         .closeNavBtn {
@@ -119,7 +125,10 @@
   }
 }
 
-.showMobileNav {
-  width: 100vw;
-  opacity: 1;
+
+
+.scrollDown {
+  transform: translate3d(0, -90%, 0);
+  border-bottom: 5px solid $mainHL;
+  padding-bottom: 37px;
 }

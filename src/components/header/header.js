@@ -9,6 +9,7 @@ export const Header = () => {
     const [userName, setUserName] = useState(false);
     const [reload, setReload] = useState(false);
     const [openNav, setOpenNav] = useState(false);
+    const [scrollDown, setScrollDown] = useState(false);
 
     useEffect(() => {
         firebaseInit();
@@ -29,14 +30,30 @@ export const Header = () => {
         setReload(!reload)
     };
 
+    const mobile = window.matchMedia("(max-width: 767px)");
     const handleToggleNav = () => {
-        setOpenNav(!openNav)
+        if (mobile.matches) {
+            setOpenNav(!openNav)
+        }
     };
+
+    let lastPosition = 0;
+    window.addEventListener("scroll", () => {
+        const currentPosition = window.pageYOffset;
+        currentPosition === 0 && setScrollDown(false);
+        currentPosition > lastPosition && setScrollDown(true);
+        lastPosition = currentPosition;
+    });
+
+    const handleHover = () => {
+        scrollDown && setScrollDown(false)
+    };
+
 
 
     return (
         <>
-            <header className={"header"}>
+            <header className={`header ${scrollDown ? "scrollDown" : "none"}`} onMouseOver={handleHover}>
                 <section className={"header__content container"}>
                     <div className={"header__content__login"}>
                         <p className={"userName"} style={{display: `${userName ? "inline-block" : "none"}`}}>Welcome <span>{userName}</span></p>
@@ -44,13 +61,13 @@ export const Header = () => {
                         {userName ? <Link to={"/logOut"} onClick={handleLogOut}>Log Out</Link> : <Link to={"/signUp"}>Sign up</Link>}
                     </div>
                     <i className="fas fa-bars navBtn" onClick={handleToggleNav} />
-                    <nav className={`header__content__nav`} style={{width: `${openNav ? "100vw" : "0"}`, opacity: `${openNav ? "1" : "0"}`}}>
+                    <nav className={`header__content__nav ${openNav ? "showMobileNav" : "none"}`}>
                         <i className="fas fa-times closeNavBtn" onClick={handleToggleNav}/>
-                        <Link to="/">Start</Link>
-                        <LinkScroll to="instruction" spy={true} smooth={true}>How it works?</LinkScroll>
-                        <LinkScroll to="about" spy={true} smooth={true}>About</LinkScroll>
-                        <LinkScroll to="foundations" spy={true} smooth={true}>Non profit Foundations </LinkScroll>
-                        <LinkScroll to="contact" spy={true} smooth={true}>Contact</LinkScroll>
+                        <Link to="/" onClick={handleToggleNav}>Start</Link>
+                        <LinkScroll to="instruction" spy={true} smooth={true} onClick={handleToggleNav}>How it works?</LinkScroll>
+                        <LinkScroll to="about" spy={true} smooth={true} onClick={handleToggleNav}>About</LinkScroll>
+                        <LinkScroll to="foundations" spy={true} smooth={true} onClick={handleToggleNav}>Non profit Foundations </LinkScroll>
+                        <LinkScroll to="contact" spy={true} smooth={true} onClick={handleToggleNav}>Contact</LinkScroll>
                     </nav>
                 </section>
             </header>
