@@ -8,6 +8,7 @@ import {firebaseInit} from "../login/firebaseConfig";
 export const Header = () => {
     const [userName, setUserName] = useState(false);
     const [reload, setReload] = useState(false);
+    const [openNav, setOpenNav] = useState(false);
 
     useEffect(() => {
         firebaseInit();
@@ -28,6 +29,11 @@ export const Header = () => {
         setReload(!reload)
     };
 
+    const handleToggleNav = () => {
+        setOpenNav(!openNav)
+    };
+
+
     return (
         <>
             <header className={"header"}>
@@ -37,7 +43,9 @@ export const Header = () => {
                         {userName ? <Link to={"/donate"} className={"donateBtn"}>Donate</Link> : <Link to={"/login"}>Log in</Link>}
                         {userName ? <Link to={"/logOut"} onClick={handleLogOut}>Log Out</Link> : <Link to={"/signUp"}>Sign up</Link>}
                     </div>
-                    <nav className={"header__content__nav"}>
+                    <i className="fas fa-bars navBtn" onClick={handleToggleNav} />
+                    <nav className={`header__content__nav`} style={{width: `${openNav ? "100vw" : "0"}`, opacity: `${openNav ? "1" : "0"}`}}>
+                        <i className="fas fa-times closeNavBtn" onClick={handleToggleNav}/>
                         <Link to="/">Start</Link>
                         <LinkScroll to="instruction" spy={true} smooth={true}>How it works?</LinkScroll>
                         <LinkScroll to="about" spy={true} smooth={true}>About</LinkScroll>

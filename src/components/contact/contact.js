@@ -104,7 +104,6 @@ export const Contact = () => {
         <>
             <Element name="contact"/>
             <section className={"contact"}>
-                <img className={"contact__bg"} src="../../assets/Background-Contact-Form.jpg" alt="bgContact"/>
                 <div className={"contact__content container"}>
                     <div className={"contact_content_wrap"}>
                         <div className={"contact__content__wrap__headline"}>

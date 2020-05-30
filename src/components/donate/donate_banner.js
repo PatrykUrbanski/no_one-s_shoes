@@ -4,8 +4,8 @@ export const DonateBanner = () => {
 
     return (
         <>
-            <section className={"banner"}>
-                <img className={"banner__Bg"} alt="bannerBg" src="../../assets/Form-Hero-Image.jpg"/>
+            <section className={"banner donate"}>
+                {/*<img className={"banner__Bg"} alt="bannerBg" src="../../assets/Form-Hero-Image.jpg"/>*/}
                 <div className={"banner__content container"}>
                     <div className={"banner__content__mainBox"}>
                         <h1 className={"title"}>

@@ -1,4 +1,10 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  z-index: 10;
 
   &__content {
 
@@ -29,15 +35,91 @@
       }
     }
 
-    &__nav {
-      display: flex;
-      justify-content: flex-end;
+    .navBtn {
+      position: absolute;
+      font-size: 25px;
 
-      a {
-        text-decoration: none;
-        margin-left: 55px;
-        color: $mainText;
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &__nav {
+      @media (max-width: 767px) {
+        height: 110vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        text-align: center;
+        overflow-x: hidden;
+        background: transparent;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        transition: .3s;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: -15px;
+          background-image: url("/assets/columnsBg.png");
+          transform-origin: 0 0;
+          transform: skew(-14deg) translateX(0);
+          opacity: .9;
+        }
+
+        .closeNavBtn {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          font-size: 25px;
+          color: $secondBg;
+        }
+
+        a {
+          transform: translateX(-15%) skew(-16deg);
+          text-align: right;
+          width: 40%;
+          display: block;
+          text-decoration: none;
+          font-size: 24px;
+          letter-spacing: 3px;
+          color: $secondBg;
+          font-weight: 700;
+          margin-bottom: 35px;
+        }
+
+        @for $i from 1 through 5 {
+          a:nth-of-type(#{$i}) {
+            margin-right: calc(0px + #{$i} * 40px);
+          }
+        }
+      }
+
+      @include tablet {
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+          text-decoration: none;
+          margin-left: 55px;
+          color: $mainText;
+        }
+
+        .closeNavBtn {
+          display: none;
+        }
       }
     }
   }
+}
+
+.showMobileNav {
+  width: 100vw;
+  opacity: 1;
 }

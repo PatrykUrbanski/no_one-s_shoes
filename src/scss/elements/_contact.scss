@@ -1,8 +1,22 @@
 .contact {
   position: relative;
   margin-top: 50px;
-  height: 900px;
+  height: 90vh;
   width: 100%;
+  &::after {
+    content: "";
+    width: 100%;
+    background-image: url("/assets/Background-Contact-Form.jpg");
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: .3;
+  }
+
 
   &__bg {
     position: absolute;
