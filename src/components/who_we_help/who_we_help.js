@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Who_We_Help_Structures} from "./who_we_help_structures";
 import {foundations, locals, nonProfit} from "./structuresData";
+import {Element} from "react-scroll";
 
 export const Who_We_Help = () => {
     const [choosenStructure, setChoosenStructure] = useState(foundations);
@@ -15,6 +16,7 @@ export const Who_We_Help = () => {
 
     return (
         <>
+            <Element name="who_we_help" />
             <section className="whoWeHelp">
                 <div className="whoWeHelp__content container">
                     <div className={"whoWeHelp__content__headlines"}>

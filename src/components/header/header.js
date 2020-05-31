@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
-import { Link as LinkScroll, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import {animateScroll as scroll, Link as LinkScroll} from 'react-scroll'
 import * as firebase from "firebase";
 import {firebaseInit} from "../login/firebaseConfig";
 
@@ -49,8 +49,6 @@ export const Header = () => {
         scrollDown && setScrollDown(false)
     };
 
-
-
     return (
         <>
             <header className={`header ${scrollDown ? "scrollDown" : "none"}`} onMouseOver={handleHover}>
@@ -66,9 +64,9 @@ export const Header = () => {
                         <LinkScroll to="banner" spy={true} smooth={true} onClick={handleToggleNav}>Start</LinkScroll>
                         {userName
                             ? <LinkScroll to="donate" spy={true} smooth={true} onClick={handleToggleNav}>Donate</LinkScroll>
-                            : <LinkScroll to="instruction" spy={true} smooth={true} onClick={handleToggleNav}>How it works?</LinkScroll>}
-                        {!userName && <LinkScroll to="about" spy={true} smooth={true} onClick={handleToggleNav}>About</LinkScroll>}
-                        {!userName && <LinkScroll to="foundations" spy={true} smooth={true} onClick={handleToggleNav}>Non profit Foundations </LinkScroll>}
+                            : <LinkScroll to="instruction" spy={true} offset={-30} smooth={true} onClick={handleToggleNav}>How it works?</LinkScroll>}
+                        {!userName && <LinkScroll to="about" spy={true} offset={-30} smooth={true} onClick={handleToggleNav}>About</LinkScroll>}
+                        {!userName && <LinkScroll to="who_we_help" spy={true} offset={-30} smooth={true} onClick={handleToggleNav}>Non profit Foundations </LinkScroll>}
                         <LinkScroll to="contact" spy={true} smooth={true} onClick={handleToggleNav}>Contact</LinkScroll>
                     </nav>
                 </section>

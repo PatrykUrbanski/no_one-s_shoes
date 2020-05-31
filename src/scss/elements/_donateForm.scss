@@ -218,6 +218,7 @@
         }
       }
     }
+
     .donateInfo {
       display: flex;
       flex-direction: column;
@@ -235,6 +236,7 @@
         }
       }
     }
+
     .addressTime {
       width: 100%;
       display: flex;
@@ -288,6 +290,10 @@
     border: 1px solid $mainText;
     margin-right: 50px;
     font-weight: 300;
+    transition: .3s;
+    &:hover {
+      border: 5px solid $mainHL;
+    }
 
   }
 }

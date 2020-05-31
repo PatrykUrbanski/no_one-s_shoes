@@ -8,8 +8,8 @@ export const DonateBanner = () => {
                 <div className={"banner__content container"}>
                     <div className={"banner__content__mainBox"}>
                         <h1 className={"title"}>
-                            <span>Donate things you don't need to those who does!</span>
-                            <img src="../../assets/Decoration.svg"/>
+                            <span>Donate unnecessary things to those who need them!</span>
+                            <img alt={"decoration"} src="../../assets/Decoration.svg"/>
                             <span>It's so simple.</span>
                         </h1>
                         <div className={"buttons donate"}>

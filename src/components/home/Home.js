@@ -5,7 +5,7 @@ import {Home_Columns} from "./home_columns";
 import {Home_instruction} from "./home_instruction";
 import {Home_About} from "./home_about";
 import {Login} from "../login/Login";
-import {Who_We_Help} from "../Who_we_help/who_we_help";
+import {Who_We_Help} from "../who_we_help/who_we_help";
 import {Contact} from "../contact/contact";
 
 

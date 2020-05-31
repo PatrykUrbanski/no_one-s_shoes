@@ -3,11 +3,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 55px;
+  margin-top: 100px;
 
   &__title {
     font-size: 38px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: center;
 
     &__text {
@@ -79,6 +79,10 @@
       text-decoration: none;
       color: $mainText;
       font-weight: 300;
+      transition: .3s;
+      &:hover {
+        border: 5px solid $mainHL;
+      }
     }
   }
 }

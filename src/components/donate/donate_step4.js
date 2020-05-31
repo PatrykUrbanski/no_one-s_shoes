@@ -1,6 +1,7 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {Link} from "react-router-dom";
 import {FormContext} from "../context/FormContext";
+
 const uniqid = require('uniqid');
 
 export const DonateStep4 = () => {

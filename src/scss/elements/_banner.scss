@@ -82,7 +82,7 @@
         }
 
         &__elem {
-          background: rgba(241, 199, 36, .7);
+          background: transparent;
           font-weight: 700;
           border: 1px solid $mainText;
           display: flex;
@@ -96,7 +96,7 @@
           margin: 30px;
           transition: .3s;
           &:hover {
-            background: rgba(241, 199, 36, 1);
+            border: 5px solid $mainHL;
           }
           @include tablet {
             width: 275px;

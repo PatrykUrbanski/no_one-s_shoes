@@ -110,6 +110,10 @@
           padding: 13px 30px;
           font-weight: 300;
           font-size: 18px;
+          transition: .3s;
+          &:hover {
+            border: 5px solid $mainHL;
+          }
         }
       }
     }

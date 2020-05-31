@@ -47,9 +47,7 @@ export const DonateStep1 = () => {
                                        onClick={e => handleCheck(e, index)} defaultChecked={clicked.indexOf(index) !== -1 && true}/>
                                 <span className={"checkmark"}/>
                                 {item}
-                            </label>
-                        )}
-
+                            </label>)}
                         <div className={"formBtn"}>
                             <Link className="formBtn__elem" to={`${path}step2`} onClick={handleNextStep} >Next</Link>
                         </div>

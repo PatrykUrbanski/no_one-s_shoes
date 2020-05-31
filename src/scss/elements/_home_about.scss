@@ -46,7 +46,7 @@
         width: 180px;
         height: 118px;
         display: none;
-        @include tablet {
+        @include desktop {
           display: block;
         }
       }
