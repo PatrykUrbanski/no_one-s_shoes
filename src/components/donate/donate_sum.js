@@ -1,6 +1,7 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext} from 'react';
 import {Link} from "react-router-dom";
 import {FormContext} from "../context/FormContext";
+
 const uniqid = require('uniqid');
 
 export const DonateSum = () => {
@@ -37,7 +38,7 @@ export const DonateSum = () => {
                 </div>
                     <div className={"formBtn"}>
                         <Link className="formBtn__elem" to={"/donate/step4"}>Back</Link>
-                        <Link className="formBtn__elem" to={"#"}>Confirm</Link>
+                        <Link className="formBtn__elem" to={"/donate/donate_success"}>Confirm</Link>
                     </div>
             </div>
         </>

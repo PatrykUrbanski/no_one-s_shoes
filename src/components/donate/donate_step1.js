@@ -1,6 +1,7 @@
 import React, {useContext, useState} from 'react';
 import {Link, useRouteMatch} from "react-router-dom";
 import {FormContext} from "../context/FormContext";
+import {DonateWarn} from "./donate_warning";
 
 const uniqid = require('uniqid');
 

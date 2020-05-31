@@ -11,8 +11,8 @@ export const Banner = () => {
                 <div className={"banner__content container"}>
                     <div className={"banner__content__mainBox"}>
                         <h1 className={"title"}>
-                            <span>Start right now!</span>
-                            <span>Give your old clothes those in need.</span>
+                            <span className="title__elem">Start right now!</span>
+                            <span className="title__elem">Give your old clothes those in need.</span>
                             <img src="../../assets/Decoration.svg"/>
                         </h1>
                         <div className={"buttons"}>
