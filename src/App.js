@@ -1,7 +1,7 @@
 import React from 'react';
 import {Header} from "./components/header/header";
 import {HashRouter, Route, Switch} from "react-router-dom";
-import {Home} from "./components/Home/Home";
+import {Home} from "./components/home/Home";
 import {Login} from "./components/login/Login";
 import {SignUp} from "./components/login/signUp";
 import {Donate} from "./components/donate/donate";

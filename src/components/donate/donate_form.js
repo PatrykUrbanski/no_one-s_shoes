@@ -8,13 +8,14 @@ import {DonateSum} from "./donate_sum";
 import {FormContextProvider} from "../context/FormContext";
 import {DonateWarn} from "./donate_warning";
 import {DonateSuccess} from "./donate_success";
-
+import {Element} from "react-scroll";
 
 export const DonateForm = () => {
     let {path} = useRouteMatch();
 
     return (
         <>
+            <Element name="donate" />
             <section className={"donateForm"}>
                 <div className={"wrap"}>
                     <div className={"container"}>

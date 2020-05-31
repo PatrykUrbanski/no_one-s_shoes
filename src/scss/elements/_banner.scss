@@ -7,7 +7,6 @@
     background-image: url("/assets/Home-Hero-Image.jpg");
     background-position: -483px;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -28,7 +27,6 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: top -50px;
-      background-attachment: fixed;
       position: absolute;
       z-index: -3;
       top: 0;
@@ -84,7 +82,8 @@
         }
 
         &__elem {
-          font-weight: 300;
+          background: rgba(241, 199, 36, .7);
+          font-weight: 700;
           border: 1px solid $mainText;
           display: flex;
           flex-direction: column;
@@ -95,6 +94,10 @@
           width: 50%;
           height: 60px;
           margin: 30px;
+          transition: .3s;
+          &:hover {
+            background: rgba(241, 199, 36, 1);
+          }
           @include tablet {
             width: 275px;
             height: 120px;
@@ -117,9 +120,9 @@
 
           i {
             font-size: 150px;
-            opacity: .2;
+            opacity: .4;
             z-index: -1;
-            color: $mainText;
+            color: rgba(241, 199, 36, 1);
             transform: rotate(45deg);
             @include tablet {
               font-size: 170px;

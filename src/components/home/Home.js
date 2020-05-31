@@ -13,9 +13,10 @@ export const Home = () => {
     return (
         <>
             <Banner/>
-            <Home_Columns/>
+            {/*<Home_Columns/>*/}
             <Home_instruction/>
             <Home_About/>
+            <Home_Columns/>
             <Who_We_Help/>
             <Contact/>
         </>

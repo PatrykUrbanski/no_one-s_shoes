@@ -7,21 +7,23 @@ const uniqid = require('uniqid');
 export const DonateStep2 = () => {
     const [bagsNumber, setBagsNumber] = useState("");
     const accessData = useContext(FormContext);
-
-    const handleAddData = () => {
+    const [errorMsg, setErrorMsg] = useState(false);
+    const handleAddData = (e) => {
+        if (bagsNumber === "") {
+            e.preventDefault();
+            setErrorMsg(true)
+        }
         accessData.setFormData(prevState => ({
             ...prevState,
             bags: bagsNumber
         }));
     };
 
-
-
     return (
         <>
             <div className={"donateForm__content"}>
                 <span className={"step"}>Step: 2/4</span>
-                <h2 className={"title"}>How many 60 liters bags did you collect?</h2>
+                <h2 className={"title"} style={{color: `${errorMsg && "red"}`}}>How many 60 liters bags did you collect?</h2>
                 <form className={"form"}>
                     <label className={"form__numberOfBags"}>Enter number of bags:
                         <input type={"number"} name={"numberOfBags"} value={bagsNumber} onChange={e => setBagsNumber(e.target.value)}/>

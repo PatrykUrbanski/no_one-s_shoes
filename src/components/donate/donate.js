@@ -9,7 +9,6 @@ export const Donate = () => {
     return (
         <>
             <DonateBanner/>
-
             <DonateForm/>
             <Contact/>
         </>

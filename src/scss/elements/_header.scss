@@ -73,7 +73,7 @@
           background-image: url("/assets/columnsBg.png");
           transform-origin: 0 0;
           transform: skew(-14deg) translateX(0);
-          opacity: .9;
+          opacity: 1;
         }
         &.showMobileNav {
           width: 100vw;
@@ -111,11 +111,18 @@
       @include tablet {
         display: flex;
         justify-content: flex-end;
+        padding-bottom: 10px;
+
 
         a {
           text-decoration: none;
           margin-left: 55px;
           color: $mainText;
+          padding-bottom: 5px;
+          transition: .2s;
+          &:hover {
+            border-bottom: 3px solid $mainHL;
+          }
         }
 
         .closeNavBtn {

@@ -1,7 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {Link, useRouteMatch} from "react-router-dom";
 import {FormContext} from "../context/FormContext";
-import {DonateWarn} from "./donate_warning";
 
 const uniqid = require('uniqid');
 
@@ -11,6 +10,7 @@ export const DonateStep1 = () => {
 
     const [selectedItems, setSelectedItems] = useState([]);
     const [clicked, setClicked] = useState([-1]);
+    const [errorMsg, setErrorMsg] = useState(false);
 
     const accessData = useContext(FormContext);
 
@@ -27,13 +27,19 @@ export const DonateStep1 = () => {
         }));
     };
 
+    const handleNextStep = (e) => {
+        if (selectedItems.length === 0) {
+            e.preventDefault();
+            setErrorMsg(true)
+        }
+    };
 
 
     return (
         <>
             <div className={"donateForm__content"}>
                     <span className={"step"}>Step: 1/4</span>
-                    <h2 className={"title"}>Choose things you want to donate:</h2>
+                    <h2 className={"title"} style={{color: `${errorMsg && "red"}`}}>Choose things you want to donate:</h2>
                     <form className={"form"}>
                         {selectItems.map((item, index) =>
                             <label key={uniqid()} className={"form__elem"}>
@@ -45,7 +51,7 @@ export const DonateStep1 = () => {
                         )}
 
                         <div className={"formBtn"}>
-                            <Link className="formBtn__elem" to={`${path}step2`}>Next</Link>
+                            <Link className="formBtn__elem" to={`${path}step2`} onClick={handleNextStep} >Next</Link>
                         </div>
                     </form>
             </div>

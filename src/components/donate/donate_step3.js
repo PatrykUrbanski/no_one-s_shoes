@@ -13,6 +13,7 @@ export const DonateStep3 = () => {
     const [helpGroups, setHelpGroups] = useState([]);
     const [clicked, setClicked] = useState([-1]);
     const accessData = useContext(FormContext);
+    const [errorMsg, setErrorMsg] = useState(false);
 
 
     const handleCheck = (e, index) => {
@@ -28,17 +29,24 @@ export const DonateStep3 = () => {
         }));
     };
 
+    const handleNextStep = (e) => {
+        if (location === "" && helpGroups.length === 0) {
+            e.preventDefault();
+            setErrorMsg(true)
+        }
+    };
+
     return (
         <>
             <div className={"donateForm__content"}>
                 <span className={"step"}>Step: 3/4</span>
-                <h2 className={"title"}>Location:</h2>
+                <h2 className={"title"} style={{color: `${errorMsg && "red"}`}}>Location:</h2>
                 <form className={"form"}>
                     <select className={"form__cities"} value={location} onChange={e => setLocation(e.target.value)}>
                         <option value={""}>--select city--</option>
                         {cities.map(city => <option value={city} key={uniqid()}>{city}</option> )}
                     </select>
-                    <h2 className={"form__subtitle"}>Who do you want to help?</h2>
+                    <h2 className={"form__subtitle"} style={{color: `${errorMsg && "red"}`}}>Who do you want to help?</h2>
                     <div className={"form__elemHelp"}>
                     {toHelp.map((item, index) =>
                             <label className={"form__elemHelp__box"} key={uniqid()}>
@@ -54,7 +62,7 @@ export const DonateStep3 = () => {
 
                     <div className={"formBtn"}>
                         <Link className="formBtn__elem" to="/donate/step2">Back</Link>
-                        <Link className="formBtn__elem" to="/donate/step4">Next</Link>
+                        <Link className="formBtn__elem" to="/donate/step4" onClick={handleNextStep}>Next</Link>
                     </div>
                 </form>
             </div>

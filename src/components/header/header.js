@@ -64,9 +64,11 @@ export const Header = () => {
                     <nav className={`header__content__nav ${openNav ? "showMobileNav" : "none"}`}>
                         <i className="fas fa-times closeNavBtn" onClick={handleToggleNav}/>
                         <LinkScroll to="banner" spy={true} smooth={true} onClick={handleToggleNav}>Start</LinkScroll>
-                        <LinkScroll to="instruction" spy={true} smooth={true} onClick={handleToggleNav}>How it works?</LinkScroll>
-                        <LinkScroll to="about" spy={true} smooth={true} onClick={handleToggleNav}>About</LinkScroll>
-                        <LinkScroll to="foundations" spy={true} smooth={true} onClick={handleToggleNav}>Non profit Foundations </LinkScroll>
+                        {userName
+                            ? <LinkScroll to="donate" spy={true} smooth={true} onClick={handleToggleNav}>Donate</LinkScroll>
+                            : <LinkScroll to="instruction" spy={true} smooth={true} onClick={handleToggleNav}>How it works?</LinkScroll>}
+                        {!userName && <LinkScroll to="about" spy={true} smooth={true} onClick={handleToggleNav}>About</LinkScroll>}
+                        {!userName && <LinkScroll to="foundations" spy={true} smooth={true} onClick={handleToggleNav}>Non profit Foundations </LinkScroll>}
                         <LinkScroll to="contact" spy={true} smooth={true} onClick={handleToggleNav}>Contact</LinkScroll>
                     </nav>
                 </section>
