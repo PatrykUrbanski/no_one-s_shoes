@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {Element} from "react-scroll";
 
 export const Banner = () => {
 
     return (
         <>
+            <Element name="banner"/>
             <section className={"banner"}>
-                {/*<img className={"banner__Bg"} alt="bannerBg" src="../../assets/Home-Hero-Image.jpg"/>*/}
                 <div className={"banner__content container"}>
                     <div className={"banner__content__mainBox"}>
                         <h1 className={"title"}>

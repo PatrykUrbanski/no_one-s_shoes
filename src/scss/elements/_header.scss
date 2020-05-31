@@ -3,9 +3,10 @@
   top: 0;
   left: 0;
   right: 0;
-  background: transparent;
+  background: rgba(255, 255, 255, .8);
   z-index: 10;
   transition: .3s;
+  padding-bottom: 10px;
 
   &__content {
 
@@ -131,4 +132,5 @@
   transform: translate3d(0, -90%, 0);
   border-bottom: 5px solid $mainHL;
   padding-bottom: 37px;
+
 }

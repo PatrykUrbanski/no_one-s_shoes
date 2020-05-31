@@ -14,16 +14,21 @@
       margin: 30px 0;
 
       .title {
-        font-size: 38px;
-        margin-bottom: 35px;
+        font-size: 25px;
+        margin-bottom: 10px;
         text-align: center;
+        @include tablet {
+          font-size: 38px;
+          margin-bottom: 35px;
+        }
       }
 
       .decoration {
+        width: auto;
         text-align: center;
       }
 
-      .btn {
+      .btns {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -31,12 +36,17 @@
         width: 100%;
 
         &__elem {
-          font-size: 24px;
           font-weight: 300;
-          padding: 23px 42px;
           text-decoration: none;
           color: $mainText;
-          margin: 23px 50px;
+          font-size: 18px;
+          padding: 12px 20px;
+          margin: 12px 25px;
+          @include tablet {
+            font-size: 24px;
+            margin: 23px 50px;
+            padding: 23px 42px;
+          }
 
           &.check {
             border: 1px solid $mainText;
@@ -49,22 +59,34 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 100%;
+      width: 80%;
+      @include tablet {
+        width: 50%;
+      }
 
       &__text {
-        font-size: 22px;
-        line-height: 30px;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 30px;
         font-weight: 300;
         text-align: center;
-        width: 50%;
-        margin-bottom: 66px;
+        width: 100%;
+        @include tablet {
+          font-size: 22px;
+          line-height: 30px;
+          margin-bottom: 66px;
+        }
       }
 
       &__content {
         font-family: $font-alt;
-        width: 80%;
+        width: 100%;
         position: relative;
-        padding: 30px;
+        padding: 15px 0;
+        @include tablet {
+          padding: 30px;
+          width: 150%;
+        }
 
         &:nth-of-type(2) {
           border-top: 1px solid $mainText;
@@ -72,20 +94,32 @@
         }
 
         .name {
-          font-size: 26px;
           margin-bottom: 10px;
+          font-size: 18px;
+          @include tablet {
+            font-size: 26px;
+          }
+
         }
 
         .description {
-          font-size: 18px;
+          font-size: 14px;
+          @include tablet {
+            font-size: 18px;
+          }
         }
 
         .items {
+          display: none;
           font-size: 14px;
           position: absolute;
           right: 10px;
           top: 50%;
           font-weight: 300;
+          margin-left: 10px;
+          @include desktop {
+            display: block;
+          }
         }
       }
     }

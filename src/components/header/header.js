@@ -63,7 +63,7 @@ export const Header = () => {
                     <i className="fas fa-bars navBtn" onClick={handleToggleNav} />
                     <nav className={`header__content__nav ${openNav ? "showMobileNav" : "none"}`}>
                         <i className="fas fa-times closeNavBtn" onClick={handleToggleNav}/>
-                        <Link to="/" onClick={handleToggleNav}>Start</Link>
+                        <LinkScroll to="banner" spy={true} smooth={true} onClick={handleToggleNav}>Start</LinkScroll>
                         <LinkScroll to="instruction" spy={true} smooth={true} onClick={handleToggleNav}>How it works?</LinkScroll>
                         <LinkScroll to="about" spy={true} smooth={true} onClick={handleToggleNav}>About</LinkScroll>
                         <LinkScroll to="foundations" spy={true} smooth={true} onClick={handleToggleNav}>Non profit Foundations </LinkScroll>

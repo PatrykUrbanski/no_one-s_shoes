@@ -14,7 +14,6 @@ export const DonateForm = () => {
     return (
         <>
             <section className={"donateForm"}>
-                <img className={"donateForm__bg"} src="../../assets/Background-Form.jpg" alt={"donateForm_bg"}/>
                 <div className={"wrap"}>
                     <div className={"container"}>
                         <FormContextProvider>

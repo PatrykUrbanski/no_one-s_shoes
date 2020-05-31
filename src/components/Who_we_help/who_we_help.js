@@ -19,11 +19,11 @@ export const Who_We_Help = () => {
                 <div className="whoWeHelp__content container">
                     <div className={"whoWeHelp__content__headlines"}>
                         <h2 className={"title"}>Who we help?</h2>
-                        <img className={"decoration"} src="../../../assets/Decoration.svg"/>
-                        <div className={"btn"}>
-                            <a className={`btn__elem ${clickedBtn === "foundations" && "check"}`} name={"foundations"} href={"#"} onClick={e => handleClick(e)}>Trusted Foundations</a>
-                            <a className={`btn__elem ${clickedBtn === "nonProfit" && "check"}`} name={"nonProfit"} href={"#"} onClick={e => handleClick(e)}>Non Profit Organizations</a>
-                            <a className={`btn__elem ${clickedBtn === "locals" && "check"}`} name={"locals"} href={"#"} onClick={e => handleClick(e)}>Locals collections</a>
+                        <img alt="decoration " className={"decoration"} src="../../../assets/Decoration.svg"/>
+                        <div className={"btns"}>
+                            <a className={`btns__elem ${clickedBtn === "foundations" && "check"}`} name={"foundations"} href={"#"} onClick={e => handleClick(e)}>Trusted Foundations</a>
+                            <a className={`btns__elem ${clickedBtn === "nonProfit" && "check"}`} name={"nonProfit"} href={"#"} onClick={e => handleClick(e)}>Non Profit Organizations</a>
+                            <a className={`btns__elem ${clickedBtn === "locals" && "check"}`} name={"locals"} href={"#"} onClick={e => handleClick(e)}>Locals collections</a>
                         </div>
                     </div>
                     <Who_We_Help_Structures choosenStructure={choosenStructure}/>

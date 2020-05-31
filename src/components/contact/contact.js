@@ -105,7 +105,7 @@ export const Contact = () => {
             <Element name="contact"/>
             <section className={"contact"}>
                 <div className={"contact__content container"}>
-                    <div className={"contact_content_wrap"}>
+                    <div className={"contact__content__wrap"}>
                         <div className={"contact__content__wrap__headline"}>
                             <h2 className={"title"}>Contact us</h2>
                             <img className={"decoration"} src="../../assets/Decoration.svg" alt={"deco"}/>
