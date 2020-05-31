@@ -7,7 +7,7 @@
 
  <img src="https://i.ibb.co/nPt5xxR/loggedIn.png" alt="alt text" width="500px" height="250px">
  
- <img src=" https://i.ibb.co/Hp1qQcz/foundations.png" alt="alt text" width="500px" height="250px">
+ <img src="https://i.ibb.co/Hp1qQcz/foundations.png" alt="alt text" width="500px" height="250px">
  
  <img src="https://i.ibb.co/3zD63Sb/contact.png" alt="alt text" width="500px" height="250px">
  
