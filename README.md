@@ -12,7 +12,8 @@
  <img src="https://i.ibb.co/3zD63Sb/contact.png" alt="alt text" width="500px" height="250px">
  
  
-Website build with:
+ 
+### Website build with:
 - React (with contextApi, React Router)
 - HTML5
 - SASS
