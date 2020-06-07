@@ -1,8 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {Link} from "react-router-dom";
-import {FormContext} from "../context/FormContext";
-
-const uniqid = require('uniqid');
+import {FormContext} from "../context/formContext";
 
 export const DonateStep4 = () => {
     const [street, setStreet] = useState("");
@@ -14,7 +12,6 @@ export const DonateStep4 = () => {
     const [msg, setMsg] = useState("");
     const accessData = useContext(FormContext);
     const [errorMsg, setErrorMsg] = useState(false);
-
     const handleAddData = (e) => {
         if (!street || !city || !postCode || postCode.length > 6 || phone.length > 9 || !phone || !day || !time) {
             setErrorMsg(true);

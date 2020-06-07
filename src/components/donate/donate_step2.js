@@ -1,8 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {Link} from "react-router-dom";
-import {FormContext} from "../context/FormContext";
-
-const uniqid = require('uniqid');
+import {FormContext} from "../context/formContext";
 
 export const DonateStep2 = () => {
     const [bagsNumber, setBagsNumber] = useState("");
@@ -36,4 +34,4 @@ export const DonateStep2 = () => {
             </div>
         </>
     )
-}
+};

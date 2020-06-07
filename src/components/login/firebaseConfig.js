@@ -1,7 +1,5 @@
 import * as firebase from "firebase";
 
-
-
 export const firebaseInit = () => {
     const firebaseConfig = {
         apiKey: "AIzaSyAxZ7xJ7cpcLdNVwt_Pc36zrIZqdf1PNIg",

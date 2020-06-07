@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link as LinkScroll, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import {Element} from 'react-scroll'
 import {Link} from "react-router-dom";
 
-export const Home_instruction = () => {
+export const HomeInstruction = ({userName}) => {
 
     return (
         <>
@@ -10,12 +10,12 @@ export const Home_instruction = () => {
                 <Element name="instruction"/>
                 <div className={"instruction__title"}>
                     <h2 className={"instruction__title__text"}>It's so simple!</h2>
-                    <img src="../../assets/Decoration.svg"/>
+                    <img alt="decoration" src="../../assets/Decoration.svg"/>
                 </div>
                 <div className={"instruction__steps"}>
                     <div className={"instruction__steps__content container"}>
                         <div className={"box"}>
-                            <img className={"box__icon"} src="../../assets/Icon-1.svg" alt={"icon"}/>
+                            <img  className={"box__icon"} src="../../assets/Icon-1.svg" alt={"icon"}/>
                             <span className={"box__name"}>Choose stuff you don't need.</span>
                             <span className={"box__text"}>Clothes, toys, households goods.</span>
                         </div>
@@ -37,7 +37,7 @@ export const Home_instruction = () => {
                     </div>
                 </div>
                 <div className={"instruction__btn"}>
-                    <Link className={"instruction__btn__elem"} to="/login">Donate!</Link>
+                    <Link className={"instruction__btn__elem"} to={`${userName ? "/donate" : "/login"}`}>Donate!</Link>
                 </div>
             </section>
         </>

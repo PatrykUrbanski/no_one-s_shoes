@@ -35,6 +35,10 @@
 
         &__icon {
           margin-bottom: 8px;
+          @media (max-width: 330px) {
+            width: 40px;
+            height: 40px;
+          }
         }
 
         &__name {

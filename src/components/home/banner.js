@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import {Element} from "react-scroll";
 
-export const Banner = () => {
+export const Banner = ({userName}) => {
 
     return (
         <>
@@ -13,11 +13,11 @@ export const Banner = () => {
                         <h1 className={"title"}>
                             <span className="title__elem">Start right now!</span>
                             <span className="title__elem">Give your old clothes those in need.</span>
-                            <img src="../../assets/Decoration.svg"/>
+                            <img alt="decoration" src="../assets/Decoration.svg"/>
                         </h1>
                         <div className={"buttons"}>
-                            <Link to="/login" className={"buttons__elem"}>Donate!</Link>
-                            <Link to="/login" className={"buttons__elem"}>Arrange pickup.</Link>
+                            <Link to={`${userName ? "/donate" : "/login"}`} className={"buttons__elem"}>Donate!</Link>
+                            <Link to={`${userName ? "/donate" : "/login"}`} className={"buttons__elem"}>Set the pickup.</Link>
                         </div>
                     </div>
                 </div>

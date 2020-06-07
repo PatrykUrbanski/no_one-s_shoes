@@ -5,36 +5,30 @@ export const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [msg, setMsg] = useState("");
-
     const [nameErrMsg, setNameErrMsg] = useState(false);
     const [msgErrMsg, setMsgErrMsg] = useState(false);
     const [emailErrMsg, setEmailErrMsg] = useState(false);
-
     const [successMsg, setSuccessMsg] = useState(false);
-
     const [checked, setChecked] = useState(false);
-
     const resetForm = () => {
     setName("");
     setEmail("");
     setMsg("")
     };
-
-
     const nameValid = () => {
         if (name.length < 1 || name.indexOf(" ") !== -1) {
             setNameErrMsg(true)
         }else {
             setNameErrMsg(false);
         }
-    }
+    };
     const msgValid = () => {
         if (msg.length < 120) {
             setMsgErrMsg(true)
         }else {
             setMsgErrMsg(false)
         }
-    }
+    };
     const emailValid = () => {
         if (email.length < 5) {
             setEmailErrMsg(true)
@@ -42,44 +36,29 @@ export const Contact = () => {
             setEmailErrMsg(false);
         }
     };
-
     const valid = () => {
         setChecked(false);
         nameValid();
         msgValid();
         emailValid();
-            // name.length < 1 || name.indexOf(" ") !== -1 ? setNameErrMsg(true) : setNameErrMsg(false);
-            // msg.length < 120 ? setMsgErrMsg(true) : setMsgErrMsg(false);
-            // email.length < 5 ? setEmailErrMsg(true) : setEmailErrMsg(false);
         setChecked( true);
-
     };
-
-
-
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         valid();
-
         if (!checked) {
             return null;
         } else {
             if (nameErrMsg || msgErrMsg || emailErrMsg) {
                 return null;
             }
-
-
             setSuccessMsg(false);
-
-
             const newMsg = {
                 name: name,
                 email: email,
                 message: msg
             };
-
             fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
                 method: "POST",
                 headers: {
@@ -92,13 +71,9 @@ export const Contact = () => {
                         data.status === "success" && setSuccessMsg(true)
                     })
             });
-
             resetForm();
-
         }
     };
-
-
 
     return (
         <>
@@ -145,5 +120,4 @@ export const Contact = () => {
             </section>
         </>
         )
-
 };

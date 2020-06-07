@@ -1,13 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
+
 var uniqid = require('uniqid');
 
-export const Who_We_Help_Pagination = ({totalElems, paginate, checkedNumber}) => {
+export const WhoWeHelpPagination = ({totalElems, paginate, checkedNumber}) => {
     const pageNumbers = [];
-
     for (let i = 1; i <= Math.ceil(totalElems.length / 3); i++) {
         pageNumbers.push(i)
     }
-
     const handleClick = (e, number, index) => {
         e.preventDefault();
         paginate(number, index);
@@ -20,5 +19,4 @@ export const Who_We_Help_Pagination = ({totalElems, paginate, checkedNumber}) =>
             ))}
         </nav>
     )
-
 };

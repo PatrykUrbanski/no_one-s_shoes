@@ -1,21 +1,17 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
-import {FormContext} from "../context/FormContext";
+import {FormContext} from "../context/formContext";
 const uniqid = require('uniqid');
 
 export const DonateStep3 = () => {
-
     const cities = ["Wroclaw", "Warsaw", "Krakow", "Gdansk", "Poznan", "Lodz"];
     const toHelp = ["Kids", "Single Mothers", "Homeless", "Eldery People", "Disabled", "Animals"];
-
     const [location, setLocation] = useState("");
     const [specialOrganization, setSpecialOrganization] = useState("");
     const [helpGroups, setHelpGroups] = useState([]);
     const [clicked, setClicked] = useState([-1]);
     const accessData = useContext(FormContext);
     const [errorMsg, setErrorMsg] = useState(false);
-
-
     const handleCheck = (e, index) => {
         if (e.target.checked) {
             setHelpGroups([...helpGroups, e.target.value]);
@@ -28,7 +24,6 @@ export const DonateStep3 = () => {
             helpGroups: helpGroups,
         }));
     };
-
     const handleNextStep = (e) => {
         if (location === "" && helpGroups.length === 0) {
             e.preventDefault();
@@ -68,4 +63,4 @@ export const DonateStep3 = () => {
             </div>
         </>
     )
-}
+};

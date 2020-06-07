@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
-import {Who_We_Help_Structures} from "./who_we_help_structures";
+import {WhoWeHelpStructures} from "./who_we_help_structures";
 import {foundations, locals, nonProfit} from "./structuresData";
 import {Element} from "react-scroll";
 
-export const Who_We_Help = () => {
+export const WhoWeHelp = () => {
     const [choosenStructure, setChoosenStructure] = useState(foundations);
     const [clickedBtn, setClickedBtn] = useState("foundations");
-
     const handleClick = (e) => {
         e.preventDefault();
         const {name} = e.target;
@@ -28,7 +27,7 @@ export const Who_We_Help = () => {
                             <a className={`btns__elem ${clickedBtn === "locals" && "check"}`} name={"locals"} href={"#"} onClick={e => handleClick(e)}>Locals collections</a>
                         </div>
                     </div>
-                    <Who_We_Help_Structures choosenStructure={choosenStructure}/>
+                    <WhoWeHelpStructures choosenStructure={choosenStructure} />
                 </div>
             </section>
         </>

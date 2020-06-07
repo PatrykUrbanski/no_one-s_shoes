@@ -1,19 +1,16 @@
 import React, {useContext, useState} from 'react';
 import {Link, useRouteMatch} from "react-router-dom";
-import {FormContext} from "../context/FormContext";
+import {FormContext} from "../context/formContext";
 
 const uniqid = require('uniqid');
 
 export const DonateStep1 = () => {
     let {path} = useRouteMatch();
     const selectItems = ["clothes", "shoes", "toys", "books", "other"];
-
     const [selectedItems, setSelectedItems] = useState([]);
     const [clicked, setClicked] = useState([-1]);
     const [errorMsg, setErrorMsg] = useState(false);
-
     const accessData = useContext(FormContext);
-
     const handleCheck = (e, index) => {
         e.preventDefault();
         const {value} = e.target;
@@ -26,14 +23,12 @@ export const DonateStep1 = () => {
             items: selectedItems
         }));
     };
-
     const handleNextStep = (e) => {
         if (selectedItems.length === 0) {
             e.preventDefault();
             setErrorMsg(true)
         }
     };
-
 
     return (
         <>

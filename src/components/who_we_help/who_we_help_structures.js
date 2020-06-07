@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {foundations, locals, nonProfit} from "./structuresData";
-import {Who_We_Help_Pagination} from "./who_we_help_pagination";
+import {WhoWeHelpPagination} from "./who_we_help_pagination";
 const uniqid = require('uniqid');
 
-export const Who_We_Help_Structures = ({choosenStructure}) => {
+export const WhoWeHelpStructures = ({choosenStructure}) => {
     const [structure, setStructure] = useState(choosenStructure);
     const [currentPage, setCurrentPage] = useState(1);
     const [checkedNumber, setCheckedNumber] = useState(0);
-
 
     useEffect(() => {
         choosenStructure === "foundations" && setStructure(foundations);
@@ -21,7 +20,6 @@ export const Who_We_Help_Structures = ({choosenStructure}) => {
     const indexOfFirstEl = indexOfLastEl - 3;
     const totalElems = Object.keys(structure);
     const currentElems = totalElems.slice(indexOfFirstEl, indexOfLastEl);
-
     const paginate = (number, index) => {
         setCurrentPage(number);
         setCheckedNumber(index)
@@ -39,7 +37,7 @@ export const Who_We_Help_Structures = ({choosenStructure}) => {
                         </div>
                     )}
             </div>
-            {(totalElems.length / 3) > 1 && <Who_We_Help_Pagination totalElems={totalElems} paginate={paginate} checkedNumber={checkedNumber}/>}
+            {(totalElems.length / 3) > 1 && <WhoWeHelpPagination totalElems={totalElems} paginate={paginate} checkedNumber={checkedNumber}/>}
         </>
     )
 };

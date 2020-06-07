@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Home_Columns = () => {
+export const HomeColumns = () => {
     return (
         <>
             <section className={"columns"}>

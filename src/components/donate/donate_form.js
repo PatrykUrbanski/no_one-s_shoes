@@ -5,8 +5,7 @@ import {DonateStep3} from "./donate_step3";
 import {DonateStep4} from "./donate_step4";
 import {Route, Switch, useRouteMatch} from "react-router-dom";
 import {DonateSum} from "./donate_sum";
-import {FormContextProvider} from "../context/FormContext";
-import {DonateWarn} from "./donate_warning";
+import {FormContextProvider} from "../context/formContext";
 import {DonateSuccess} from "./donate_success";
 import {Element} from "react-scroll";
 
@@ -34,4 +33,5 @@ export const DonateForm = () => {
             </section>
         </>
     )
-}
+};
+

@@ -14,12 +14,14 @@ $column-base-width: 100% / $columns;
       width: $column-base-width;
       padding: 12px;
     }
+
     @for $i from 1 through $columns {
       .col-#{$i} {
         width: $column-base-width * $i;
       }
     }
   }
+
   .row-s {
     @include tablet {
       display: flex;
@@ -27,6 +29,7 @@ $column-base-width: 100% / $columns;
         min-height: 1px;
         width: $column-base-width;
       }
+
       @for $i from 1 through $columns {
         @include tablet {
           .col-s-#{$i} {
@@ -36,6 +39,7 @@ $column-base-width: 100% / $columns;
       }
     }
   }
+
   .row-md {
     @include desktop {
       display: flex;
@@ -43,6 +47,7 @@ $column-base-width: 100% / $columns;
         min-height: 1px;
         width: $column-base-width;
       }
+
       @for $i from 1 through $columns {
         @include desktop {
           .col-md-#{$i} {

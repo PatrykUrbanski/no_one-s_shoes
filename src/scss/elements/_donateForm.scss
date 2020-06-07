@@ -1,5 +1,5 @@
 .donateForm {
-  width: 100%;
+  width: 99vw;
   height: 650px;
   position: relative;
   background-image: url("/assets/Background-Form.jpg");
@@ -36,7 +36,9 @@
       margin-top: 10px;
       margin-bottom: 20px;
       transition: .3s;
-
+      @media (max-width: 330px) {
+        font-size: 20px;
+      }
       @include tablet {
         font-size: 36px;
         margin-bottom: 40px;
@@ -62,6 +64,9 @@
         flex-direction: column;
         font-weight: 700;
         width: 40%;
+        @media (max-width: 330px) {
+          font-size: 18px;
+        }
 
         &__elem {
           font-weight: 300;
@@ -73,7 +78,7 @@
           }
 
           input, textarea {
-            width: 100%;
+            width: 90%;
             float: right;
             background: #e8e8e6;
             border: 1px solid $mainText;
@@ -101,6 +106,9 @@
         font-weight: 700;
         margin-top: 20px;
         margin-bottom: 20px;
+        @media (max-width: 330px) {
+          font-size: 20px;
+        }
 
         &.organisationField {
           display: flex;
@@ -207,7 +215,6 @@
         font-size: 24px;
         font-weight: 300;
 
-
         input {
           background: transparent;
           border: 1px solid $mainText;
@@ -228,6 +235,9 @@
       &__details {
         margin-top: 20px;
         font-weight: 400;
+        @media (max-width: 330px) {
+          font-size: 18px;
+        }
 
         img {
           margin-right: 20px;
@@ -245,6 +255,10 @@
       font-size: 18px;
       font-weight: 700;
       margin-top: 50px;
+      @media (max-width: 330px) {
+        font-size: 16px;
+        margin-top: 25px;
+      }
       @include tablet {
         width: 50%;
         font-size: 24px;
@@ -279,7 +293,6 @@
   position: absolute;
   font-size: 24px;
   bottom: 30px;
-
 
   &__elem {
     text-decoration: none;

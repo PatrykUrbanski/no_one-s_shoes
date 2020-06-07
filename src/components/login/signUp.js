@@ -1,36 +1,26 @@
-import React, {useState} from 'react';
-import {Link} from "react-router-dom";
+import React, {useContext, useEffect, useState} from 'react';
+import {Link, useLocation} from "react-router-dom";
 import * as firebase from "firebase";
 import {firebaseInit} from "./firebaseConfig";
-
-
+import {LoginContext} from "../context/loginContext";
 
 export const SignUp = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [repeatPassword, setRepeatPassword] = useState("");
-
     const [success, setSuccess] = useState(false);
     const [errorMsg, setErrorMsg] = useState(false);
-
-
     const resetForm = () => {
         setEmail("");
         setPassword("");
         setRepeatPassword("");
     };
-
-
-
     const handleSignUp = () => {
-
         setSuccess(false);
         setErrorMsg(false);
-
         firebaseInit();
-
         if (!email || password !== repeatPassword) {
-            setErrorMsg("You must complete all fields. Passwords must be the same.")
+            setErrorMsg("You must complete all fields. Passwords must be the same.");
             return null
         }
         firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -43,15 +33,18 @@ export const SignUp = () => {
             setErrorMsg(error.message)
         });
     };
-
-
+    let accessData = useContext(LoginContext);
+    let actualLocation = useLocation();
+    useEffect(() => {
+        accessData.setLocation(actualLocation.pathname);
+    }, []);
 
     return (
         <>
             <section className={"login"}>
                 <div className={"login__content container"}>
                     <h2 className={"title"}>Sign Up</h2>
-                    <img className={"decoration"} src="../../assets/Decoration.svg" alt={"deco"}/>
+                    <img className={"decoration"} src="../../assets/Decoration.svg" alt={"decoration"}/>
                     <h3 className={"successInfo"} style={{display: `${success ? "block" : "none"}`}}>You have successfully registered! <Link to={"/donate"}>You can start donating right now!</Link></h3>
                     <h3 className={"errorInfo"} style={{display: `${errorMsg ? "block" : "none"}`}}>{errorMsg}</h3>
                     <form className={"form"}>
@@ -70,9 +63,7 @@ export const SignUp = () => {
                         <Link  to="/login" className={"loginBtn__Elem"}>Log In</Link>
                     </div>
                 </div>
-
-
             </section>
         </>
     )
-}
+};

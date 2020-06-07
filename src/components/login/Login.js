@@ -1,23 +1,18 @@
-import React, {useState} from 'react';
-import {Link, useHistory} from "react-router-dom";
+import React, {useContext, useEffect, useState} from 'react';
+import {Link, useHistory, useLocation} from "react-router-dom";
 import {firebaseInit} from "./firebaseConfig";
 import * as firebase from "firebase";
+import {LoginContext} from "../context/loginContext";
 
 export const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorMsg, setErrorMsg] = useState(false);
-
-    let history = useHistory();
-
-
     const handleLogin = () => {
         firebaseInit();
-
         if (!email || !password) {
             return null
         }
-
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(response => response)
             .then(data => {
@@ -27,14 +22,20 @@ export const Login = () => {
             setErrorMsg(error.message)
         });
     };
+    let history = useHistory();
+    let accessData = useContext(LoginContext);
+    let actualLocation = useLocation();
 
+    useEffect(() => {
+        accessData.setLocation(actualLocation.pathname);
+    }, []);
 
     return (
         <>
             <section className={"login"}>
                 <div className={"login__content container"}>
                     <h2 className={"title"}>Log in</h2>
-                    <img className={"decoration"} src="../../assets/Decoration.svg" alt={"deco"}/>
+                    <img className={"decoration"} src="../../assets/Decoration.svg" alt={"decoration"}/>
                     <h3 className={"errorInfo"} style={{display: `${errorMsg ? "block" : "none"}`}}>{errorMsg}</h3>
                     <form className={"form"}>
                         <label>Email

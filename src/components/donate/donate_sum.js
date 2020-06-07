@@ -1,14 +1,10 @@
 import React, {useContext} from 'react';
 import {Link} from "react-router-dom";
-import {FormContext} from "../context/FormContext";
-
-const uniqid = require('uniqid');
+import {FormContext} from "../context/formContext";
 
 export const DonateSum = () => {
-
     const accessData = useContext(FormContext);
     const data = accessData.formData;
-
     return (
         <>
             <div className={"donateForm__content"}>
@@ -43,4 +39,4 @@ export const DonateSum = () => {
             </div>
         </>
     )
-}
+};
