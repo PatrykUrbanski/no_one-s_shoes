@@ -1,6 +1,6 @@
 import React from 'react';
 import {Header} from "./components/header/header";
-import {HashRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, Switch} from "react-router-dom";
 import {Home} from "./components/home/Home";
 import {Login} from "./components/login/Login";
 import {SignUp} from "./components/login/signUp";
@@ -10,7 +10,7 @@ import {LogOut} from "./components/login/logOut";
 
 export const App = () => {
   return (
-      <HashRouter>
+      <BrowserRouter>
           <>
               <Header/>
               <Switch>
@@ -21,7 +21,7 @@ export const App = () => {
                   <Route path="/donate" component={Donate}/>
               </Switch>
           </>
-      </HashRouter>
+      </BrowserRouter>
   )
 };
 

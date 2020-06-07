@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import { Link as LinkScroll, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import React, {useState} from 'react';
+import {Element} from 'react-scroll'
 
 export const Contact = () => {
     const [name, setName] = useState("");
