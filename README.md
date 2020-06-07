@@ -1,7 +1,9 @@
-# No_One's_Shoes     --- IN PROGRESS
+# No_One's_Shoes
 
 ### Project of website helping people who want to give their used clothed to trusted institutions.
 
+
+## [LIVE DEMO](http://no-ones-shoes.surge.sh/)
 
  <img src="https://i.ibb.co/kGpk2Bz/Zrzut-ekranu-z-2020-05-18-12-46-31.png" alt="alt text" width="500px" height="250px">
 
